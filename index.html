@@ -322,6 +322,12 @@
   &copy; <span id="current-year"></span> Shanna Hazel A. Palomo. All Rights Reserved.
 </footer>
 
+<!-- Image Modal -->
+<div id="imageModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
 <script>
    const faders = document.querySelectorAll('.fade-on-scroll');
 
@@ -428,6 +434,38 @@ function changeSlide(n, type) {
 function goToSlide(index, type) {
   showSlide(type, index);
 }
+
+// Modal Functions
+function openModal(src) {
+  document.getElementById('imageModal').classList.add('active');
+  document.getElementById('modalImage').src = src;
+}
+
+function closeModal() {
+  document.getElementById('imageModal').classList.remove('active');
+}
+
+// Add click event listeners to all slide images for fullscreen
+document.querySelectorAll('.slide-item img').forEach(img => {
+  img.style.cursor = 'pointer';
+  img.addEventListener('click', function(e) {
+    openModal(this.src);
+  });
+});
+
+// Close modal when clicking outside image
+document.getElementById('imageModal').addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeModal();
+  }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeModal();
+  }
+});
 
 // Initialize all slideshows
 ['academic', 'social', 'work'].forEach(type => initSlideshow(type));

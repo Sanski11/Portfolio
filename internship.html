@@ -213,6 +213,12 @@ and gained confidence working in a professional tech environment.
 </p>
 </section>
 
+<!-- Image Modal -->
+<div id="imageModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
 <!-- Footer -->
 <footer style="text-align: center; padding: 25px 0; background: rgba(15,15,15,0.6); border-top: 1px solid rgba(255,255,255,0.1); color: #fff; font-size: 14px;">
   &copy; <span id="current-year"></span> Shanna Hazel A. Palomo. All Rights Reserved.
@@ -244,6 +250,16 @@ and gained confidence working in a professional tech environment.
     appearOnScroll.observe(fader);
   });
 
+// Modal Functions
+function openModal(src) {
+  document.getElementById('imageModal').classList.add('active');
+  document.getElementById('modalImage').src = src;
+}
+
+function closeModal() {
+  document.getElementById('imageModal').classList.remove('active');
+}
+
 function openModal(src) {
 document.getElementById("imageModal").style.display = "block";
 document.getElementById("modalImage").src = src;
@@ -272,6 +288,38 @@ function showSlide(index) {
     workDots[i].classList.toggle('active', i === index);
   });
 }
+
+// Modal Functions
+function openModal(src) {
+  document.getElementById('imageModal').classList.add('active');
+  document.getElementById('modalImage').src = src;
+}
+
+function closeModal() {
+  document.getElementById('imageModal').classList.remove('active');
+}
+
+// Add click event listeners to all slide images for fullscreen
+document.querySelectorAll('.slide-item img').forEach(img => {
+  img.style.cursor = 'pointer';
+  img.addEventListener('click', function(e) {
+    openModal(this.src);
+  });
+});
+
+// Close modal when clicking outside image
+document.getElementById('imageModal').addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeModal();
+  }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeModal();
+  }
+});
 
 function changeSlide(n) {
   workIndex = (workIndex + n + workSlides.length) % workSlides.length;
