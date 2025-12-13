@@ -6,6 +6,14 @@
 <title>Experiential Learning | Shanna Hazel Palomo</title>
 <link rel="stylesheet" href="styles.css" />
 <style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #eaeaea;
+    background: linear-gradient(135deg, #1e3a8a, #561bbc);
+    transition: 0.3s;
+  }
+
   body.dark {
     background: linear-gradient(135deg, #2a0d4b, #5e20b2);
     color: #eaeaea;
@@ -30,12 +38,28 @@
     color: #ffd700;
   }
 
+  .nav-links a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+    margin-left: 24px;
+  }
+
+  .nav-links a:first-child {
+    margin-left: 0;
+  }
+
   nav .nav-item {
     margin-left: 16px;
     font-weight: 600;
     text-decoration: none;
     color: #fff;
     transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #ffd700;
   }
 
   nav .nav-item:hover {
@@ -109,6 +133,7 @@
 <nav>
   <div class="nav-links">
     <a  href="index.html">Home</a>
+    <a class="nav-item" href="internship.html">Internship</a>
     <a class="nav-item" href="academic.html">Academic</a>
     <a class="nav-item" href="reflections.html">Reflections</a>
     <a class="nav-item" href="experiential.html">Experiential</a>
