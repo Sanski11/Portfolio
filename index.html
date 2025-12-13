@@ -371,12 +371,19 @@
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-links a");
 
-  window.addEventListener("scroll", () => {
+  function updateActiveLink() {
     let current = "";
+    let closestSection = null;
+    let closestDistance = Infinity;
+    
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100;
-      if (scrollY >= sectionTop) {
-        current = section.getAttribute("id");
+      const sectionTop = section.offsetTop;
+      const distance = Math.abs(scrollY - sectionTop);
+      
+      if (scrollY >= sectionTop - 200 && distance < closestDistance) {
+        closestDistance = distance;
+        closestSection = section.getAttribute("id");
+        current = closestSection;
       }
     });
 
@@ -386,7 +393,13 @@
         link.classList.add("active");
       }
     });
-  });
+  }
+
+  // Update on page load
+  updateActiveLink();
+
+  // Update on scroll
+  window.addEventListener("scroll", updateActiveLink);
 
 // Store slide indices for each slideshow
 const slideIndices = {
