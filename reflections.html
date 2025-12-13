@@ -122,12 +122,11 @@
     <a class="nav-item" href="academic.html">Academic</a>
     <a class="nav-item" href="reflections.html">Reflections</a>
     <a class="nav-item" href="experiential.html">Experiential</a>
-    <a class="nav-item" href="#contact">Contact</a>
   </div>
   <button id="theme-toggle-btn">🌙</button>
 </nav>
 
-<section class="section">
+<section class="section fade-on-scroll">
   <h1>Reflections on College Life</h1>
   <p>A summary of my experiences, lessons learned, and commitments throughout my academic journey.</p>
 
@@ -182,6 +181,28 @@
 <script>
   // Set current year dynamically
   document.getElementById('current-year').textContent = new Date().getFullYear();
+
+   const faders = document.querySelectorAll('.fade-on-scroll');
+
+  const appearOptions = {
+    threshold: 0.2, // 20% of the element is visible
+    rootMargin: "0px 0px -50px 0px" // optional offset
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // observer.unobserve(entry.target); // optional: stop observing after fade-in
+      } else {
+        entry.target.classList.remove('visible'); // fades out when scrolling back up
+      }
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
 
   // Dark mode toggle
   const themeBtn = document.getElementById('theme-toggle-btn');

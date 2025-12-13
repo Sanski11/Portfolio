@@ -122,12 +122,11 @@
     <a class="nav-item" href="academic.html">Academic</a>
     <a class="nav-item" href="reflections.html">Reflections</a>
     <a class="nav-item" href="experiential.html">Experiential</a>
-    <a class="nav-item" href="#contact">Contact</a>
   </div>
   <button id="theme-toggle-btn">🌙</button>
 </nav>
 
-<section class="section">
+<section class="section fade-on-scroll">
   <h1>Exemplary Academic Work</h1>
   <p>
     A curated collection of my most significant individual and group projects completed during my Bachelor of Science in Information Systems journey.
@@ -138,7 +137,7 @@
 </section>
 
 <!-- Individual Work -->
-<section class="section">
+<section class="section fade-on-scroll">
   <h2>Individual Academic Work</h2>
 
   <h3>Programming Exercises (Python, C++, C#, Unity)</h3>
@@ -158,7 +157,7 @@
 </section>
 
 <!-- Group Work -->
-<section class="section">
+<section class="section fade-on-scroll">
   <h2>Group Academic Work</h2>
 
   <h3>Elevating Budget Hotels: Integrated Web and Mobile Solutions for Guest and Operational Management (Capstone)</h3>
@@ -245,6 +244,27 @@
   // Set current year dynamically
   document.getElementById('current-year').textContent = new Date().getFullYear();
 
+   const faders = document.querySelectorAll('.fade-on-scroll');
+
+  const appearOptions = {
+    threshold: 0.2, // 20% of the element is visible
+    rootMargin: "0px 0px -50px 0px" // optional offset
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // observer.unobserve(entry.target); // optional: stop observing after fade-in
+      } else {
+        entry.target.classList.remove('visible'); // fades out when scrolling back up
+      }
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
   // Generic slideshow function
   function initSlideshow(slideshowId, dotsId){
     let index = 0;

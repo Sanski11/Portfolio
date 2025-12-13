@@ -43,7 +43,7 @@
   </div>
 </div>
 
-<section id="resume" class="section">
+<section id="resume" class="section fade-on-scroll">
   <h2 class="animated-text">Electronic Resume</h2>
 
   <div class="resume-card">
@@ -71,7 +71,7 @@
   </div>
 </section>
 
-  <section id="internship" class="section">
+  <section id="internship" class="section fade-on-scroll">
   <h2 class="animated-text">Internship Learning</h2>
 
   <p class="internship-intro">
@@ -149,7 +149,7 @@
 </section>
 
 
-<section id="academic" class="section">
+<section id="academic" class="section fade-on-scroll">
   <h2 class="animated-text">Exemplary Academic Work</h2>
   <p class="academic-intro">
     A collection of my best individual and group academic outputs developed throughout my IS program.
@@ -210,7 +210,7 @@
 </div>
 </section>
 
-<section id="reflections" class="section">
+<section id="reflections" class="section fade-on-scroll">
   <h2 class="animated-text">Reflections on College Life</h2>
 
   <h3>Lessons Learned</h3>
@@ -246,7 +246,7 @@
   </a>
 </section>
 
-<section id="experiential" class="section">
+<section id="experiential" class="section fade-on-scroll">
   <h2 class="animated-text">Experiential Learning</h2>
   <p>
     My involvement in student organizations, workshops, and other extracurricular activities helped me strengthen communication, teamwork, and problem-solving skills.
@@ -264,7 +264,7 @@
 </section>
 
 
-  <section id="contact" class="section contact-section">
+  <section id="contact" class="section contact-section fade-on-scroll">
   <h2 class="animated-text">Contact Me</h2>
   <p>Feel free to reach out or connect with me using any of the platforms below.</p>
 
@@ -322,6 +322,28 @@
 </footer>
 
 <script>
+   const faders = document.querySelectorAll('.fade-on-scroll');
+
+  const appearOptions = {
+    threshold: 0.2, // 20% of the element is visible
+    rootMargin: "0px 0px -50px 0px" // optional offset
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // observer.unobserve(entry.target); // optional: stop observing after fade-in
+      } else {
+        entry.target.classList.remove('visible'); // fades out when scrolling back up
+      }
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+
     // Set current year dynamically
   document.getElementById('current-year').textContent = new Date().getFullYear();
   
