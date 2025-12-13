@@ -12,7 +12,6 @@
     color: #eaeaea;
     background: linear-gradient(135deg, #1e3a8a, #561bbc);
     transition: 0.3s;
-    height: 100%;
   }
 
   body.dark {
@@ -164,7 +163,11 @@
     </li>
   </ul>
 </section>
-
+<!-- Modal -->
+<div id="imageModal" class="modal">
+<span class="close" onclick="closeModal()">&times;</span>
+<img class="modal-content" id="modalImage">
+</div>
 <script>
   // Dark mode toggle
   const themeBtn = document.getElementById('theme-toggle-btn');
