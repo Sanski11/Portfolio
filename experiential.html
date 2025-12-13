@@ -68,7 +68,7 @@
   .section {
     max-width: 900px;
     margin: 60px auto;
-    padding: 80px 20px;
+    padding: 0 20px;
   }
 
   h1 {
@@ -164,7 +164,15 @@
   </ul>
 </section>
 
+<!-- Footer -->
+<footer style="text-align: center; padding: 25px 0; background: rgba(15,15,15,0.6); border-top: 1px solid rgba(255,255,255,0.1); color: #fff; font-size: 14px;">
+  &copy; <span id="current-year"></span> Shanna Hazel A. Palomo. All Rights Reserved.
+</footer>
+
 <script>
+  // Set current year dynamically
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+
   // Dark mode toggle
   const themeBtn = document.getElementById('theme-toggle-btn');
   themeBtn.addEventListener('click', () => {
