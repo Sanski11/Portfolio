@@ -142,10 +142,11 @@ button, input {
   transform: scale(1);
 }
 
+/* ===== Unified Section Layout ===== */
 .section {
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 0 20px;
+  max-width: 1100px;      /* flexible but consistent width */
+  margin: 0 auto;         /* center content */
+  padding: 6.5rem 20px 2rem; /* top | sides | bottom */
 }
 
 .section-title {
@@ -966,7 +967,6 @@ button, input {
 }
 
 /* ========== SECTION STYLES ========== */
-
 
 .section-title {
   position: relative;
