@@ -850,7 +850,7 @@ button, input {
   z-index: 0;
   border-radius: inherit;
   filter: blur(60px);
-  opacity: 0.4;
+  opacity: 0.8;
   pointer-events: none;
 }
 
