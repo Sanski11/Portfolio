@@ -4,323 +4,422 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shanna Hazel Palomo — Portfolio</title>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
   <link rel="stylesheet" href="styles.css">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
 <body>
-
-  <!-- Navigation -->
-  <nav class="navbar">
-    <span class="logo">Sans</span>
-
-    <div class="nav-links">
-      <a href="#resume">Resume</a>
-      <a href="#internship">Internship</a>
-      <a href="#academic">Academic</a>
-      <a href="#reflections">Reflections</a>
-      <a href="#experiential">Experiential</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <!-- Dark Mode Toggle -->
-    <button id="theme-toggle">🌙</button>
-  </nav>
-
-<div class="hero relative">
-  <!-- Moving Gradient Background -->
-  <div class="absolute inset-0 moving-gradient"></div>
-
-  <div class="hero-text">
-    <h1 class="animated-text">Hi, I'm Shanna Hazel Palomo</h1>
-    <p>Information Systems Student, QA, & Web Developer</p>
-    <a href="#resume-view" class="btn outline">View Resume</a>
+  <!-- Navigation Toggle -->
+  <div class="nav-toggle" id="nav-toggle">
+    <i class="uil uil-bars"></i>
   </div>
 
-  <div class="hero-image">
-    <img src="profile.jpg" alt="Profile Photo">
-  </div>
-</div>
+  <!-- Theme Toggle Button -->
+  <button id="theme-toggle-btn" style="position: fixed; top: 1rem; right: 5rem; background: none; border: none; color: #ffd700; font-size: 1.5rem; cursor: pointer; padding: 10px; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; z-index: 100;" aria-label="Toggle Dark Mode">🌙</button>
 
-<section id="resume" class="section fade-on-scroll">
-  <h2 class="animated-text">Electronic Resume</h2>
+<div class="sidebar-backdrop" id="sidebar-backdrop"></div>
 
-  <div class="resume-card">
-    <div class="resume-info">
-      <h3>Web-Based Resume</h3>
-      <p>
-        This electronic resume highlights my education, technical skills,
-        internship experience, and academic background. It is designed to be
-        viewable directly on the web or downloaded.
-      </p>
-    </div>
-
-    <!-- Embedded Resume -->
-    <div id="resume-view" class="resume-view">
-      <iframe 
-        src="Resume_Palomo, Shanna Hazel.pdf" 
-        width="100%" 
-        height="600px" 
-        style="border: 1px solid #ccc; border-radius: 10px;">
-      </iframe>
-	  <div class="resume-actions">
-        <a href="Resume_Palomo, Shanna Hazel.pdf" class="btn" download>Download Resume</a>
-        <a href="Resume_Palomo, Shanna Hazel.pdf" target="_blank" class="btn">View Resume</a>
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <div class="nav-menu">
+        <div class="menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#home" class="nav-link active-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#resume" class="nav-link">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a href="#internship" class="nav-link">Internship</a>
+            </li>
+            <li class="nav-item">
+              <a href="#academic" class="nav-link">Academic</a>
+            </li>
+            <li class="nav-item">
+              <a href="#reflections" class="nav-link">Reflections</a>
+            </li>
+            <li class="nav-item">
+              <a href="#experiential" class="nav-link">Experiential</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-  <section id="internship" class="section fade-on-scroll">
-  <h2 class="animated-text">Internship Learning</h2>
-
-  <p class="internship-intro">
-    I served as a <strong>QA Intern at WizyEMM</strong>, 
-	acquiring practical expertise in comprehensive manual test execution, 
-	establishing structured QA lifecycle workflows, 
-	and maintaining effective cross-functional communication within an Agile software development team.
-  </p>
-
-  <!-- Tasks & Outputs -->
-  <h3 class="subheading">Tasks & Outputs</h3>
-  <ul class="task-list">
-    <li>Manual regression testing & bug documentation</li>
-    <li>Daily standups & sprint planning participation</li>
-	<li>Assisted in reviewing QA processes to improve efficiency</li>
-    <li>Proactive communication with team leads</li>
-  </ul>
-
-<!-- Project Description -->
-<h3 class="subheading">Project Description</h3>
-<p>
-  I performed manual testing to ensure software reliability, 
-  including UI checks, functional tests, and regression validation. 
-  I documented issues clearly and collaborated with the development team, 
-  gaining hands-on experience in QA workflows, bug tracking, and cross-team communication.
-</p>
-
-<!-- Social Photos Slideshow -->
-<section id="social" class="section">
-  <h2>Social Photos</h2>
-  <div class="slideshow-container" id="social-slideshow">
-    <div class="slides-wrapper">
-      <div class="slide-item"><img src="tasks/social1.jpg" alt="Social 1"></div>
-      <div class="slide-item"><img src="tasks/social2.jpg" alt="Social 2"></div>
-      <div class="slide-item"><img src="tasks/social3.jpg" alt="Social 3"></div>
-      <div class="slide-item"><img src="tasks/social4.jpg" alt="Social 4"></div>
-      <div class="slide-item"><img src="tasks/social5.jpg" alt="Social 5"></div>
-      <div class="slide-item"><img src="tasks/social6.jpg" alt="Social 6"></div>
-    </div>
-
-    <button class="prev" onclick="changeSlide(-1, 'social')">&#10094;</button>
-    <button class="next" onclick="changeSlide(1, 'social')">&#10095;</button>
-    <div class="dots" id="social-dots"></div>
-  </div>
-</section>
-
-<!-- Work Photos Slideshow -->
-<section id="work" class="section">
-  <h2>Work Photos</h2>
-  <div class="slideshow-container" id="work-slideshow">
-    <div class="slides-wrapper">
-      <div class="slide-item"><img src="tasks/work1.jpg" alt="Work 1"></div>
-      <div class="slide-item">
-        <a href="tasks/work3.pdf" target="_blank">
-          <img src="tasks/work3-thumbnail.jpg" alt="Work 3 PDF">
-        </a>
+      <div class="nav-close" id="nav-close">
+        <i class="uil uil-times"></i>
       </div>
-      <div class="slide-item">
-        <a href="tasks/work4.pdf" target="_blank">
-          <img src="tasks/work4-thumbnail.jpg" alt="Work 4 PDF">
-        </a>
-      </div>
-    </div>
+    </nav>
+  </aside>
 
-    <button class="prev" onclick="changeSlide(-1, 'work')">&#10094;</button>
-    <button class="next" onclick="changeSlide(1, 'work')">&#10095;</button>
-    <div class="dots" id="work-dots"></div>
-  </div>
-</section>
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Home Section -->
+    <section class="home" id="home">
+      <div class="moving-gradient"></div>
+      <div class="home-container container grid">
+        <div class="home-social">
+          <span class="home-social-follow">Follow Me</span>
+          <div class="home-social-links">
+            <a href="https://www.facebook.com/SANSKI.1159" target="_blank" class="home-social-link">
+              <i class="uil uil-facebook-f"></i>
+            </a>
+            <a href="https://github.com/Sanski11" target="_blank" class="home-social-link">
+              <i class="uil uil-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/shanna-hazel-palomo-570b64313/" target="_blank" class="home-social-link">
+              <i class="uil uil-linkedin"></i>
+            </a>
+          </div>
+        </div>
 
-  <!-- CTA -->
-  <a href="internship.html" class="btn internship-btn">
-    View Full Internship Page →
-  </a>
-</section>
+        <img src="profile.jpg" alt="Profile Photo" class="home-img">
 
-
-<section id="academic" class="section fade-on-scroll">
-  <h2 class="animated-text">Exemplary Academic Work</h2>
-  <p class="academic-intro">
-    A collection of my best individual and group academic outputs developed throughout my IS program.
-  </p>
-
-  <!-- Academic Categories -->
-  <div class="academic-categories">
-    <h3>Individual Work</h3>
+        <div class="home-data">
+          <h1 class="home-title animated-text">Hi, I'm Shanna Hazel Palomo</h1>
+          <h3 class="home-subtitle">Information Systems Student, QA, & Web Developer</h3>
+          <p class="home-description">I have high-level experience in QA testing, web development, and producing quality work</p>
+          <a href="#resume" class="button">
+            <i class="uil uil-user button-icon"></i>
+            Learn More
+          </a>
+        </div>
+<!-- Right Side Highlights -->
+<div class="home-right">
+  <div class="highlight-card">
+    <h3>Current Focus</h3>
     <ul>
-      <li>Programming activities in Python, C++, and C#</li>
-      <li>Web layout and UI/UX mockups</li>
-	  <li>Database design and SQL queries</li>
-    </ul>
-
-    <h3>Group Work</h3>
-    <ul>
-      <li>System analysis & design case studies</li>
-      <li>Research presentations and documentation</li>
-      <li>Collaborative feasibility studies</li>
-      <li>EzStay Capstone Project — A web-based request management system developed using HTML, CSS, JavaScript, and Flask.</li>
-	  <li>Aphelion: Cats & Dragons — An academic game project demonstrating creative design, gameplay mechanics, and collaborative development.</li>
+      <li><i class="uil uil-bug"></i> Manual QA Testing</li>
+      <li><i class="uil uil-code-branch"></i> Web Development</li>
     </ul>
   </div>
 
-  <div class="slideshow-container" id="academic-slideshow">
-    <div class="slides-wrapper">
-      <div class="slide-item">
-        <div class="project-card">
-          <img src="projects/ezStay.png" alt="EzStay - Capstone Project">
-          <h3>EzStay - Capstone Project</h3>
-          <p>A web-based request management system developed using HTML, CSS, JavaScript, and Flask.</p>
-          <div class="project-links">
-            <a href="https://github.com/Sanski11/Capstone" target="_blank">Source Code</a>
+          <div class="highlight-card">
+            <h3>Role</h3>
+            <p>Information Systems Student<br>QA Intern</p>
+          </div>
+
+          <div class="highlight-card">
+            <h3>Goal</h3>
+            <p>Entry-level QA / Web Developer position</p>
+          </div>
+        </div>
+
+        <div class="my-info">
+          <div class="info-item">
+            <i class="uil uil-envelope-edit info-icon"></i>
+            <div>
+              <h3 class="info-title">Email</h3>
+              <span class="info-subtitle">shannahazelpalomo@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="uil uil-map-marker info-icon"></i>
+            <div>
+              <h3 class="info-title">Location</h3>
+              <span class="info-subtitle">Philippines</span>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="slide-item">
-        <div class="project-card">
-          <img src="projects/Aphelion.png" alt="Aphelion: Cats & Dragons">
-          <h3>Aphelion: Cats & Dragons</h3>
-          <p>An academic game project demonstrating creative design, gameplay mechanics, and collaborative development.</p>
-          <div class="project-links">
-            <a href="https://guild-academic-sector.itch.io/aphelion-catsndragons" target="_blank">View on itch.io</a>
+    <!-- Resume Section -->
+    <section class="resume section fade-on-scroll" id="resume">
+      <h2 class="section-title" data-heading="My Qualifications">Electronic Resume</h2>
+      
+      <div class="resume-container container" style="display: flex; flex-direction: column; gap: 40px;">
+        <div class="resume-info" style="max-width: 700px; margin: 0 auto; text-align: center;">
+          <h3>Web-Based Resume</h3>
+          <p>
+            This electronic resume highlights my education, technical skills,
+            internship experience, and academic background. It is designed to be
+            viewable directly on the web or downloaded.
+          </p>
+          <div style="margin-top: 20px;">
+            <a href="Resume_Palomo, Shanna Hazel.pdf" class="button" download>
+              <i class="uil uil-download-alt button-icon"></i>
+              Download Resume
+            </a>
+            <a href="Resume_Palomo, Shanna Hazel.pdf" target="_blank" class="button" style="margin-left: 10px;">
+              <i class="uil uil-external-link-alt button-icon"></i>
+              View Resume
+            </a>
+          </div>
+        </div>
+
+        <div id="resume-view" class="resume-view" style="width: 100%;">
+          <iframe 
+            src="Resume_Palomo, Shanna Hazel.pdf" 
+            width="100%" 
+            height="600px" 
+            style="border: 1px solid #7c3aed; border-radius: 10px;">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Internship Section -->
+    <section class="internship section fade-on-scroll" id="internship">
+      <h2 class="section-title" data-heading="My Experience">Internship Learning</h2>
+
+      <div class="internship-container container">
+        <div class="internship-intro">
+          <h3 style="color: #ffd700; margin-bottom: 15px;">QA Intern at WizyEMM</h3>
+          <p>
+            I acquired practical expertise in comprehensive manual test execution, establishing structured QA lifecycle workflows, and maintaining effective cross-functional communication within an Agile software development team.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 40px;">
+          <div>
+            <h3 class="section-title" style="font-size: 1.2rem; text-align: left; margin-bottom: 20px;">Tasks & Outputs</h3>
+            <ul style="list-style: disc inside; line-height: 2;">
+              <li>Manual regression testing & bug documentation</li>
+              <li>Daily standups & sprint planning participation</li>
+              <li>Assisted in reviewing QA processes to improve efficiency</li>
+              <li>Proactive communication with team leads</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="section-title" style="font-size: 1.2rem; text-align: left; margin-bottom: 20px;">Project Description</h3>
+            <p>
+              I performed manual testing to ensure software reliability, including UI checks, functional tests, and regression validation. I documented issues clearly and collaborated with the development team, gaining hands-on experience in QA workflows, bug tracking, and cross-team communication.
+            </p>
+          </div>
+        </div>
+      <section class="section fade-on-scroll">
+        <h2>Moments from My Internship Journey</h2>
+        <p style="text-align: center; margin-bottom: 40px; color: #ccc;">
+          A collection of moments and experiences during my professional growth.
+        </p>
+          <!-- Slideshow -->
+          <div class="slideshow-container" id="social-slideshow">
+              <div class="slides-wrapper">
+                <div class="slide-item"><img src="tasks/social1.jpg" alt="Social Moment 1"></div>
+                <div class="slide-item"><img src="tasks/social2.jpg" alt="Social Moment 2"></div>
+                <div class="slide-item"><img src="tasks/social3.jpg" alt="Social Moment 3"></div>
+                <div class="slide-item"><img src="tasks/social4.jpg" alt="Social Moment 4"></div>
+                <div class="slide-item"><img src="tasks/social5.jpg" alt="Social Moment 5"></div>
+                <div class="slide-item"><img src="tasks/social6.jpg" alt="Social Moment 6"></div>
+              </div>
+
+            <button class="prev" onclick="changeSlide(-1, 'social')">&#10094;</button>
+            <button class="next" onclick="changeSlide(1, 'social')">&#10095;</button>
+
+            <div class="dots" id="social-dots"></div>
+          </div>
+
+          <p style="text-align: center; margin-top: 30px; color: #aaa; font-size: 14px;">
+            💡 Click on images to view in fullscreen
+          </p>
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="internship.html" class="button">
+            <i class="uil uil-arrow-right"></i> View Full Internship Page
+          </a>
+        </div>
+      </div>
+      </section>
+    </section>
+
+    <!-- Academic Section -->
+    <section class="academic section fade-on-scroll" id="academic">
+      <h2 class="section-title" data-heading="My Work">Exemplary Academic Work</h2>
+
+      <div class="academic-container container">
+        <div class="academic-intro">
+          <h3 style="color: #ffd700; margin-bottom: 15px;">Academic Projects & Outputs</h3>
+          <p>
+            A collection of my best individual and group academic outputs developed throughout my IS program.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 40px;">
+          <div>
+            <h4 style="color: #ffd700; margin-bottom: 15px;">Individual Work</h4>
+            <ul style="list-style: disc inside; line-height: 2;">
+              <li>Programming activities in Python, C++, and C#</li>
+              <li>Web layout and UI/UX mockups</li>
+              <li>Database design and SQL queries</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 style="color: #ffd700; margin-bottom: 15px;">Group Work</h4>
+            <ul style="list-style: disc inside; line-height: 2;">
+              <li>System analysis & design case studies</li>
+              <li>Research presentations and documentation</li>
+              <li>Collaborative feasibility studies</li>
+              <li>EzStay Capstone Project</li>
+              <li>Aphelion: Cats & Dragons</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="margin-top: 40px;">
+          <h3 class="section-title" style="font-size: 1.3rem; text-align: center; margin-bottom: 30px;">Featured Projects</h3>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
+            <div class="project-card">
+              <img src="projects/ezStay.png" alt="EzStay" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+              <h4 style="color: #ffd700;">EzStay - Capstone Project</h4>
+              <p>A web-based request management system developed using HTML, CSS, JavaScript, and Flask.</p>
+              <a href="https://github.com/Sanski11/Capstone" target="_blank" class="button">
+                <i class="uil uil-github-alt"></i> View Code
+              </a>
+            </div>
+
+            <div class="project-card">
+              <img src="projects/Aphelion.png" alt="Aphelion" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+              <h4 style="color: #ffd700;">Aphelion: Cats & Dragons</h4>
+              <p>An academic game project demonstrating creative design, gameplay mechanics, and collaborative development.</p>
+              <a href="https://guild-academic-sector.itch.io/aphelion-catsndragons" target="_blank" class="button">
+                <i class="uil uil-external-link-alt"></i> Play Game
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="academic.html" class="button">
+            <i class="uil uil-arrow-right"></i> View Full Academic Page
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reflections Section -->
+    <section class="reflections section fade-on-scroll" id="reflections">
+      <h2 class="section-title" data-heading="My Journey">Reflections on College Life</h2>
+
+      <div class="reflections-container container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+          <div>
+            <h4 style="color: #ffd700; margin-bottom: 15px;">Lessons Learned</h4>
+            <p>
+              During my college journey, I developed responsibility, adaptability, and strong communication skills. 
+              Managing coursework, group projects, and internships taught me to prioritize tasks effectively, 
+              work collaboratively, and maintain productivity in team-oriented and professional settings.
+            </p>
+
+            <h4 style="color: #ffd700; margin-bottom: 15px; margin-top: 25px;">Career Goals</h4>
+            <p>
+              I aspire to pursue a career in <strong>Quality Assurance or web development</strong>. 
+              My aim is to contribute to the creation of reliable, user-friendly, and high-quality software solutions.
+            </p>
+          </div>
+
+          <div>
+            <h4 style="color: #ffd700; margin-bottom: 15px;">Personal Growth</h4>
+            <p>
+              College experiences helped me grow into a more confident, proactive, and independent professional. 
+              I learned to take initiative, accept constructive feedback, and consistently improve both my technical abilities 
+              and interpersonal skills.
+            </p>
+
+            <h4 style="color: #ffd700; margin-bottom: 15px; margin-top: 25px;">Professional Commitments</h4>
+            <ul style="list-style: disc inside; line-height: 2;">
+              <li>Continual development of technical and professional skills</li>
+              <li>Upholding integrity and professionalism</li>
+              <li>Maintaining clear and respectful communication</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-top: 40px; padding-top: 40px; border-top: 2px solid #7c3aed;">
+          <h4 style="color: #ffd700; margin-bottom: 20px; text-align: center;">Next Steps</h4>
+          <ul style="list-style: disc inside; line-height: 2; max-width: 600px; margin: 0 auto;">
+            <li>Pursue certifications to strengthen QA and technical expertise</li>
+            <li>Apply for entry-level and early-career roles in QA, testing, and development</li>
+            <li>Continue building and refining personal and academic portfolio projects</li>
+          </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="reflections.html" class="button">
+            <i class="uil uil-arrow-right"></i> View Full Reflections Page
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiential Learning Section -->
+    <section class="experiential section fade-on-scroll" id="experiential">
+      <h2 class="section-title" data-heading="My Activities">Experiential Learning</h2>
+
+      <div class="experiential-container container">
+        <div style="max-width: 800px; margin: 0 auto;">
+          <p style="text-align: center; margin-bottom: 40px;">
+            My involvement in student organizations, workshops, and other extracurricular activities 
+            helped me strengthen communication, teamwork, and problem-solving skills.
+          </p>
+
+          <div class="activity-card">
+            <div style="display: flex; align-items: start; gap: 20px;">
+              <div style="flex-shrink: 0;">
+                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #1e3a8a, #561bbc); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                  <i class="uil uil-users-alt" style="font-size: 1.8rem; color: #ffd700;"></i>
+                </div>
+              </div>
+              <div style="flex: 1;">
+                <h4 style="color: #ffd700; margin-bottom: 10px;">GUILD - Gamers Union for Innovation and Leadership Development</h4>
+                <p style="margin-bottom: 15px;">Academic Sector and Logistics</p>
+                <ul style="list-style: disc inside; line-height: 2;">
+                  <li>Participated in seminars and workshops to enhance professional knowledge</li>
+                  <li>Engaged in practical exercises and collaborative projects</li>
+                  <li>Developed leadership and teamwork skills through active involvement</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 40px;">
+            <a href="experiential.html" class="button">
+              <i class="uil uil-arrow-right"></i> View Full Experiential Page
+            </a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <button class="prev" onclick="changeSlide(-1, 'academic')">&#10094;</button>
-    <button class="next" onclick="changeSlide(1, 'academic')">&#10095;</button>
-    <div class="dots" id="academic-dots"></div>
-  </div>
-  <div class="center-button">
-  <a href="academic.html" class="btn academic-btn">
-    View Full Academic Page →
-  </a>
-</div>
-</section>
+    <!-- Contact Section -->
+    <section class="contact section fade-on-scroll" id="contact">
+      <h2 class="section-title" data-heading="Get in Touch">Contact Me</h2>
 
-<section id="reflections" class="section fade-on-scroll">
-  <h2 class="animated-text">Reflections on College Life</h2>
+      <div class="contact-container container">
+        <p style="text-align: center; margin-bottom: 40px;">
+          Feel free to reach out or connect with me using any of the platforms below.
+        </p>
 
-  <h3>Lessons Learned</h3>
-  <p>
-    During my college journey, I developed responsibility, adaptability, and strong communication skills. Managing coursework, group projects, and internships taught me to prioritize tasks effectively, work collaboratively, and maintain productivity in team-oriented and professional settings.
-  </p>
+        <!-- Social Links -->
+        <div class="contact-links" style="display: flex; justify-content: center; gap: 20px; margin-bottom: 40px; flex-wrap: wrap;">
+          <a href="https://www.facebook.com/SANSKI.1159" target="_blank" class="contact-icon" aria-label="Facebook" style="width: 50px; height: 50px; background: linear-gradient(135deg, #1e3a8a, #561bbc); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffd700; font-size: 1.5rem; transition: transform 0.3s;">
+            <i class="fab fa-facebook-f"></i>
+          </a>
 
-  <h3>Career Goals</h3>
-  <p>
-    I aspire to pursue a career in <strong>Quality Assurance or web development</strong>. My aim is to contribute to the creation of reliable, user-friendly, and high-quality software solutions.
-  </p>
+          <a href="https://github.com/Sanski11" target="_blank" class="contact-icon" aria-label="GitHub" style="width: 50px; height: 50px; background: linear-gradient(135deg, #1e3a8a, #561bbc); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffd700; font-size: 1.5rem; transition: transform 0.3s;">
+            <i class="fab fa-github"></i>
+          </a>
 
-  <h3>Personal Growth</h3>
-  <p>
-    College experiences helped me grow into a more confident, proactive, and independent professional. I learned to take initiative, accept constructive feedback, and consistently improve both my technical abilities and interpersonal skills.
-  </p>
+          <a href="https://www.linkedin.com/in/shanna-hazel-palomo-570b64313/" target="_blank" class="contact-icon" aria-label="LinkedIn" style="width: 50px; height: 50px; background: linear-gradient(135deg, #1e3a8a, #561bbc); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffd700; font-size: 1.5rem; transition: transform 0.3s;">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
 
-  <h3>Professional Commitments</h3>
-  <ul>
-    <li>Continual development of technical and professional skills</li>
-    <li>Upholding integrity and professionalism in every work environment</li>
-    <li>Maintaining clear, proactive, and respectful communication</li>
-  </ul>
+          <a href="https://www.instagram.com/sanski____/" target="_blank" class="contact-icon" aria-label="Instagram" style="width: 50px; height: 50px; background: linear-gradient(135deg, #1e3a8a, #561bbc); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffd700; font-size: 1.5rem; transition: transform 0.3s;">
+            <i class="fab fa-instagram"></i>
+          </a>
 
-  <h3>Next Steps</h3>
-  <ul>
-    <li>Pursue certifications to strengthen QA and technical expertise</li>
-    <li>Apply for entry-level and early-career roles in QA, testing, and development</li>
-    <li>Continue building and refining personal and academic portfolio projects</li>
-  </ul>
-  <a href="reflections.html" class="btn reflection-btn">
-    View Full Reflections Page →
-  </a>
-</section>
-
-<section id="experiential" class="section fade-on-scroll">
-  <h2 class="animated-text">Experiential Learning</h2>
-  <p>
-    My involvement in student organizations, workshops, and other extracurricular activities helped me strengthen communication, teamwork, and problem-solving skills.
-  </p>
-
-  <h3>Association of GUILD - Gamers Union for Innovation and Leadership Development — Academic Sector and Logistics</h3>
-  <ul>
-    <li>Participated in seminars and workshops to enhance professional knowledge</li>
-    <li>Engaged in practical exercises and collaborative projects</li>
-    <li>Developed leadership and teamwork skills through active involvement</li>
-  </ul>
-  <a href="experiential.html" class="btn experiential-btn">
-    View Full experientials Page →
-  </a>
-</section>
-
-
-  <section id="contact" class="section contact-section fade-on-scroll">
-  <h2 class="animated-text">Contact Me</h2>
-  <p>Feel free to reach out or connect with me using any of the platforms below.</p>
-
-  <!-- Social Links -->
-<div class="contact-links">
-  <a href="https://www.facebook.com/SANSKI.1159" target="_blank" class="contact-icon facebook" aria-label="Facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-
-  <a href="https://github.com/Sanski11" target="_blank" class="contact-icon github" aria-label="GitHub">
-    <i class="fab fa-github"></i>
-  </a>
-
-  <a href="https://www.linkedin.com/in/shanna-hazel-palomo-570b64313/" target="_blank" class="contact-icon linkedin" aria-label="LinkedIn">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-
-  <a href="https://www.instagram.com/sanski____/" target="_blank" class="contact-icon instagram" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-
-  <a href="mailto:shannahazelpalomo@gmail.com" class="contact-icon email" aria-label="Email">
-    <i class="fas fa-envelope"></i>
-  </a>
-</div>
-
-  <h3 class="subheading">Send me a message here!</h3>
-
- <form 
-    id="contact-form"
-    class="contact-form"
-    action="https://formsubmit.co/shannahazelpalomo@gmail.com"
-    method="POST"
-  >
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-
-    <!-- Hidden settings -->
-    <input type="hidden" name="_subject" value="New Portfolio Message">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_autoresponse"
-           value="Thank you for reaching out! I’ve received your message and will get back to you soon.">
-
-    <button type="submit" class="btn">Send Message</button>
-  </form>
-
-  <p id="form-response" style="margin-top:15px; color: #ffd700; font-weight: bold;"></p>
-</section>
-
-<!-- Footer -->
-<footer style="text-align: center; padding: 25px 0; background: rgba(15,15,15,0.6); border-top: 1px solid rgba(255,255,255,0.1); color: #fff; font-size: 14px;">
-  &copy; <span id="current-year"></span> Shanna Hazel A. Palomo. All Rights Reserved.
-</footer>
+          <a href="mailto:shannahazelpalomo@gmail.com" class="contact-icon" aria-label="Email" style="width: 50px; height: 50px; background: linear-gradient(135deg, #1e3a8a, #561bbc); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffd700; font-size: 1.5rem; transition: transform 0.3s;">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+</main>
 
 <!-- Image Modal -->
 <div id="imageModal" class="modal">
@@ -332,17 +431,16 @@
    const faders = document.querySelectorAll('.fade-on-scroll');
 
   const appearOptions = {
-    threshold: 0.2, // 20% of the element is visible
-    rootMargin: "0px 0px -50px 0px" // optional offset
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px"
   };
 
   const appearOnScroll = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
       if(entry.isIntersecting) {
         entry.target.classList.add('visible');
-        // observer.unobserve(entry.target); // optional: stop observing after fade-in
       } else {
-        entry.target.classList.remove('visible'); // fades out when scrolling back up
+        entry.target.classList.remove('visible');
       }
     });
   }, appearOptions);
@@ -350,56 +448,6 @@
   faders.forEach(fader => {
     appearOnScroll.observe(fader);
   });
-
-    // Set current year dynamically
-  document.getElementById('current-year').textContent = new Date().getFullYear();
-  
-  /* Smooth scroll */
-  function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-  }
-
-  /* Dark Mode */
-  const toggle = document.getElementById("theme-toggle");
-  toggle.onclick = () => {
-    document.body.classList.toggle("dark");
-    toggle.textContent =
-      document.body.classList.contains("dark") ? "☀️" : "🌙";
-  };
-
-  /* Active nav link */
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".nav-links a");
-
-  function updateActiveLink() {
-    let current = "";
-    let closestSection = null;
-    let closestDistance = Infinity;
-    
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const distance = Math.abs(scrollY - sectionTop);
-      
-      if (scrollY >= sectionTop - 200 && distance < closestDistance) {
-        closestDistance = distance;
-        closestSection = section.getAttribute("id");
-        current = closestSection;
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("active");
-      }
-    });
-  }
-
-  // Update on page load
-  updateActiveLink();
-
-  // Update on scroll
-  window.addEventListener("scroll", updateActiveLink);
 
 // Store slide indices for each slideshow
 const slideIndices = {
@@ -410,8 +458,11 @@ const slideIndices = {
 
 function initSlideshow(type) {
   const container = document.getElementById(type + '-slideshow');
+  if (!container) return;
+  
   const slides = container.querySelectorAll('.slide-item');
   const dotsContainer = document.getElementById(type + '-dots');
+  if (!dotsContainer) return;
 
   slides.forEach((_, i) => {
     const dot = document.createElement('span');
@@ -426,12 +477,17 @@ function initSlideshow(type) {
 
 function showSlide(type, index) {
   const container = document.getElementById(type + '-slideshow');
+  if (!container) return;
+  
   const slides = container.querySelectorAll('.slide-item');
-  const dots = document.getElementById(type + '-dots').querySelectorAll('.dot');
+  const dots = document.getElementById(type + '-dots');
+  if (!dots) return;
+  
+  const dotElements = dots.querySelectorAll('.dot');
 
   slides.forEach((slide, i) => {
     slide.style.display = i === index ? 'flex' : 'none';
-    if(dots[i]) dots[i].classList.toggle('active', i === index);
+    if(dotElements[i]) dotElements[i].classList.toggle('active', i === index);
   });
 
   slideIndices[type] = index;
@@ -439,6 +495,8 @@ function showSlide(type, index) {
 
 function changeSlide(n, type) {
   const container = document.getElementById(type + '-slideshow');
+  if (!container) return;
+  
   const slides = container.querySelectorAll('.slide-item');
   let newIndex = (slideIndices[type] + n + slides.length) % slides.length;
   showSlide(type, newIndex);
@@ -467,11 +525,14 @@ document.querySelectorAll('.slide-item img').forEach(img => {
 });
 
 // Close modal when clicking outside image
-document.getElementById('imageModal').addEventListener('click', function(e) {
-  if (e.target === this) {
-    closeModal();
-  }
-});
+const imageModal = document.getElementById('imageModal');
+if (imageModal) {
+  imageModal.addEventListener('click', function(e) {
+    if (e.target === this) {
+      closeModal();
+    }
+  });
+}
 
 // Close modal with Escape key
 document.addEventListener('keydown', function(e) {
@@ -483,42 +544,15 @@ document.addEventListener('keydown', function(e) {
 // Initialize all slideshows
 ['academic', 'social', 'work'].forEach(type => initSlideshow(type));
 
-// Optional: Autoplay (every 5s)
+// Optional: Autoplay (every 10s)
 setInterval(() => {
   ['academic', 'social', 'work'].forEach(type => {
     changeSlide(1, type);
   });
 }, 10000);
-
-const form = document.getElementById('contact-form');
-  const responseMsg = document.getElementById('form-response');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault(); // Prevent default redirect behavior
-
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        responseMsg.textContent = "✅ Thank you! Your message has been sent.";
-        form.reset();
-      } else {
-        responseMsg.textContent = "❌ Oops! Something went wrong. Please try again later.";
-      }
-    } catch (error) {
-      responseMsg.textContent = "❌ Error sending message. Check your connection.";
-      console.error(error);
-    }
-  });
 </script>
+
+<script src="sidebar.js"></script>
 
 </body>
 </html>

@@ -4,67 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reflections on College Life | Shanna Hazel Palomo</title>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 <style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #eaeaea;
-    background: linear-gradient(135deg, #1e3a8a, #561bbc);
-    transition: 0.3s;
-  }
-
-  body.dark {
-    background: linear-gradient(135deg, #2a0d4b, #5e20b2);
-    color: #eaeaea;
-  }
-
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    backdrop-filter: blur(12px);
-    background: rgba(15,15,15,0.6);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 24px;
-  }
-
-  nav h1 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #ffd700;
-  }
-
-  nav .nav-item {
-    margin-left: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s;
-  }
-
-  nav .nav-item:hover {
-    color: #ffd700;
-  }
-
-  #theme-toggle-btn {
-    padding: 6px 12px;
-    border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.3);
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-
-  #theme-toggle-btn:hover {
-    background: #ffd700;
-    color: #000;
-  }
-
   .section {
     max-width: 900px;
     margin: 60px auto;
@@ -113,18 +56,44 @@
 </style>
 </head>
 <body>
-
-<!-- Navigation -->
-<nav>
-  <div class="nav-links">
-    <a  href="index.html">Home</a>
-    <a class="nav-item" href="internship.html">Internship</a>
-    <a class="nav-item" href="academic.html">Academic</a>
-    <a class="nav-item" href="reflections.html">Reflections</a>
-    <a class="nav-item" href="experiential.html">Experiential</a>
+  <!-- Navigation Toggle -->
+  <div class="nav-toggle" id="nav-toggle">
+    <i class="uil uil-bars"></i>
   </div>
-  <button id="theme-toggle-btn">🌙</button>
-</nav>
+
+  <!-- Sidebar Backdrop -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <div class="nav-menu">
+        <div class="menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="internship.html" class="nav-link">Internship</a>
+            </li>
+            <li class="nav-item">
+              <a href="academic.html" class="nav-link">Academic</a>
+            </li>
+            <li class="nav-item">
+              <a href="reflections.html" class="nav-link">Reflections</a>
+            </li>
+            <li class="nav-item">
+              <a href="experiential.html" class="nav-link">Experiential</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav-close" id="nav-close">
+        <i class="uil uil-times"></i>
+      </div>
+    </nav>
+  </aside>
 
 <section class="section fade-on-scroll">
   <h1>Reflections on College Life</h1>
@@ -136,53 +105,72 @@
     <a href="Reflection Paper_Palomo, Shanna Hazel A..pdf" download class="btn">⬇️ Download Reflection Paper</a>
   </div>
 
-  <h2>Lessons Learned</h2>
-  <p>
-    Throughout college, I learned to adapt to challenges, communicate effectively, and collaborate with teammates from diverse backgrounds. Coursework helped me develop discipline, analytical thinking, and the ability to balance academics with personal well-being.
-  </p>
-  <p>
-    My internship provided real-world exposure, teaching me the value of proactive communication, responsibility, and openness to constructive feedback.
-  </p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+    <div>
+      <h2 style="border: none; color: #ffd700; font-size: 1.5rem; margin-bottom: 15px;">Lessons Learned</h2>
+      <p>
+        Throughout college, I learned to adapt to challenges, communicate effectively, and collaborate with teammates from diverse backgrounds. Coursework helped me develop discipline, analytical thinking, and the ability to balance academics with personal well-being.
+      </p>
+      <p>
+        My internship provided real-world exposure, teaching me the value of proactive communication, responsibility, and openness to constructive feedback.
+      </p>
+    </div>
 
-  <h2>Career Goals</h2>
-  <p>
-    I aim to build a career in <strong>Quality Assurance or web development</strong>. Eventually, I hope to specialize in automation engineering or process optimization to enhance workflows and product quality.
-  </p>
+    <div>
+      <h2 style="border: none; color: #ffd700; font-size: 1.5rem; margin-bottom: 15px;">Career Goals</h2>
+      <p>
+        I aim to build a career in <strong>Quality Assurance or web development</strong>. Eventually, I hope to specialize in automation engineering or process optimization to enhance workflows and product quality.
+      </p>
+    </div>
+  </div>
 
-  <h2>Personal Growth</h2>
-  <p>
-    College and internship experiences shaped me into a more confident, responsible, and self-aware individual. I learned to take initiative, communicate openly, and maintain a strong work ethic under pressure.
-  </p>
-  <p>
-    I now understand the importance of consistency, reliability, and emotional resilience, which I will carry into my future career.
-  </p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px;">
+    <div>
+      <h2 style="border: none; color: #ffd700; font-size: 1.5rem; margin-bottom: 15px;">Personal Growth</h2>
+      <p>
+        College and internship experiences shaped me into a more confident, responsible, and self-aware individual. I learned to take initiative, communicate openly, and maintain a strong work ethic under pressure.
+      </p>
+      <p>
+        I now understand the importance of consistency, reliability, and emotional resilience, which I will carry into my future career.
+      </p>
+    </div>
 
-  <h2>Commitments</h2>
-  <ul>
-    <li>Continuously improving technical skills and knowledge.</li>
-    <li>Maintaining professionalism and ethical integrity in every workplace.</li>
-    <li>Being proactive, reliable, and communicative.</li>
-    <li>Engaging in lifelong learning and personal growth.</li>
-  </ul>
+    <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #ffd700;">
+      <h3 style="color: #ffd700; margin-top: 0; margin-bottom: 15px;">Key Takeaways</h3>
+      <ul style="list-style: disc inside; line-height: 2; margin: 0;">
+        <li style="color: #d4d4d8;">Adaptability & resilience</li>
+        <li style="color: #d4d4d8;">Effective communication</li>
+        <li style="color: #d4d4d8;">Teamwork & collaboration</li>
+        <li style="color: #d4d4d8;">Strong work ethic</li>
+      </ul>
+    </div>
+  </div>
 
-  <h2>Next Steps</h2>
-  <ul>
-    <li>Pursue certifications and training programs to expand technical expertise.</li>
-    <li>Apply to early-career QA or IT roles to contribute and grow professionally.</li>
-    <li>Develop personal projects to enrich my portfolio and hands-on experience.</li>
-    <li>Continue enhancing communication and leadership capabilities.</li>
-  </ul>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px;">
+    <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 10px; border: 1px solid rgba(124, 58, 237, 0.3);">
+      <h2 style="border: none; margin-top: 0; color: #ffd700;">Commitments</h2>
+      <ul style="list-style: disc inside; line-height: 2.2;">
+        <li style="color: #d4d4d8;">Continuously improving technical skills and knowledge.</li>
+        <li style="color: #d4d4d8;">Maintaining professionalism and ethical integrity in every workplace.</li>
+        <li style="color: #d4d4d8;">Being proactive, reliable, and communicative.</li>
+        <li style="color: #d4d4d8;">Engaging in lifelong learning and personal growth.</li>
+      </ul>
+    </div>
+
+    <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 10px; border: 1px solid rgba(124, 58, 237, 0.3);">
+      <h2 style="border: none; margin-top: 0; color: #ffd700;">Next Steps</h2>
+      <ul style="list-style: disc inside; line-height: 2.2;">
+        <li style="color: #d4d4d8;">Pursue certifications and training programs to expand technical expertise.</li>
+        <li style="color: #d4d4d8;">Apply to early-career QA or IT roles to contribute and grow professionally.</li>
+        <li style="color: #d4d4d8;">Develop personal projects to enrich my portfolio and hands-on experience.</li>
+        <li style="color: #d4d4d8;">Continue enhancing communication and leadership capabilities.</li>
+      </ul>
+    </div>
+  </div>
 </section>
-<!-- Footer -->
-<footer style="text-align: center; padding: 25px 0; background: rgba(15,15,15,0.6); border-top: 1px solid rgba(255,255,255,0.1); color: #fff; font-size: 14px;">
-  &copy; <span id="current-year"></span> Shanna Hazel A. Palomo. All Rights Reserved.
-</footer>
 
 <script>
-  // Set current year dynamically
-  document.getElementById('current-year').textContent = new Date().getFullYear();
-
-   const faders = document.querySelectorAll('.fade-on-scroll');
+  const faders = document.querySelectorAll('.fade-on-scroll');
 
   const appearOptions = {
     threshold: 0.2, // 20% of the element is visible
@@ -210,5 +198,7 @@
     document.body.classList.toggle('dark');
   });
 </script>
+
+<script src="sidebar.js"></script>
 </body>
 </html>

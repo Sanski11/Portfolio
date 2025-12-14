@@ -4,67 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Internship Experience | QA Intern</title>
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 <link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 <style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #eaeaea;
-    background: linear-gradient(135deg, #1e3a8a, #561bbc);
-    transition: 0.3s;
-  }
-
-  body.dark {
-    background: linear-gradient(135deg, #2a0d4b, #5e20b2);
-    color: #eaeaea;
-  }
-
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    backdrop-filter: blur(12px);
-    background: rgba(15,15,15,0.6);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 24px;
-  }
-
-  nav h1 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #ffd700;
-  }
-
-  nav .nav-item {
-    margin-left: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s;
-  }
-
-  nav .nav-item:hover {
-    color: #ffd700;
-  }
-
-  #theme-toggle-btn {
-    padding: 6px 12px;
-    border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.3);
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-
-  #theme-toggle-btn:hover {
-    background: #ffd700;
-    color: #000;
-  }
-
   .section {
     max-width: 900px;
     margin: 60px auto;
@@ -113,18 +56,44 @@
 </style>
 </head>
 <body>
-
-<!-- Navigation -->
-<nav>
-  <div class="nav-links">
-    <a  href="index.html">Home</a>
-    <a class="nav-item" href="internship.html">Internship</a>
-    <a class="nav-item" href="academic.html">Academic</a>
-    <a class="nav-item" href="reflections.html">Reflections</a>
-    <a class="nav-item" href="experiential.html">Experiential</a>
+  <!-- Navigation Toggle -->
+  <div class="nav-toggle" id="nav-toggle">
+    <i class="uil uil-bars"></i>
   </div>
-  <button id="theme-toggle-btn">🌙</button>
-</nav>
+
+  <!-- Sidebar Backdrop -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <div class="nav-menu">
+        <div class="menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="internship.html" class="nav-link">Internship</a>
+            </li>
+            <li class="nav-item">
+              <a href="academic.html" class="nav-link">Academic</a>
+            </li>
+            <li class="nav-item">
+              <a href="reflections.html" class="nav-link">Reflections</a>
+            </li>
+            <li class="nav-item">
+              <a href="experiential.html" class="nav-link">Experiential</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav-close" id="nav-close">
+        <i class="uil uil-times"></i>
+      </div>
+    </nav>
+  </aside>
 
 <section class="section fade-on-scroll">
 <h1>Internship Experience</h1>
@@ -149,12 +118,22 @@ I supported the team by validating software stability and ensuring functional ac
 <!-- Responsibilities -->
 <section class="section fade-on-scroll">
 <h2>Roles & Responsibilities</h2>
-<ul class="task-list">
-<li>Conducted manual regression testing and documented bugs</li>
-<li>Tested web applications to ensure UI behavior and functional accuracy</li>
-<li>Participated in daily standups and sprint planning</li>
-<li>Maintained proactive communication with developers and team leads</li>
-</ul>
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; background: rgba(255,255,255,0.05); padding: 30px; border-radius: 12px; border: 1px solid rgba(124, 58, 237, 0.3);">
+  <div>
+    <h4 style="color: #ffd700; margin-bottom: 15px;">Testing & Quality</h4>
+    <ul style="list-style: disc inside; line-height: 2;">
+      <li>Conducted manual regression testing and documented bugs</li>
+      <li>Tested web applications to ensure UI behavior and functional accuracy</li>
+    </ul>
+  </div>
+  <div>
+    <h4 style="color: #ffd700; margin-bottom: 15px;">Team Collaboration</h4>
+    <ul style="list-style: disc inside; line-height: 2;">
+      <li>Participated in daily standups and sprint planning</li>
+      <li>Maintained proactive communication with developers and team leads</li>
+    </ul>
+  </div>
+</div>
 </section>
 
 
@@ -192,13 +171,15 @@ during my internship.
 <!-- Learning & Skills -->
 <section class="section fade-on-scroll">
 <h2>Skills & Learning Outcomes</h2>
-<ul class="task-list">
-<li>Hands-on experience with manual testing</li>
-<li>Understanding of QA workflows and regression cycles</li>
-<li>Improved bug reporting and documentation skills</li>
-<li>Strengthened communication in Agile environments</li>
-<li>Professional collaboration within a software development team</li>
-</ul>
+<div style="max-width: 800px; margin: 0 auto; background: rgba(255,255,255,0.05); padding: 30px; border-radius: 12px; border-left: 4px solid #ffd700;">
+  <ul style="list-style: disc inside; line-height: 2.2;">
+    <li style="color: #d4d4d8;">Hands-on experience with manual testing</li>
+    <li style="color: #d4d4d8;">Understanding of QA workflows and regression cycles</li>
+    <li style="color: #d4d4d8;">Improved bug reporting and documentation skills</li>
+    <li style="color: #d4d4d8;">Strengthened communication in Agile environments</li>
+    <li style="color: #d4d4d8;">Professional collaboration within a software development team</li>
+  </ul>
+</div>
 </section>
 
 
@@ -213,22 +194,43 @@ and gained confidence working in a professional tech environment.
 </p>
 </section>
 
+<!-- Social Pictures Gallery Section -->
+<section class="section fade-on-scroll">
+<h2>Moments from My Internship Journey</h2>
+<p style="text-align: center; margin-bottom: 40px; color: #ccc;">
+  A collection of moments and experiences during my professional growth.
+</p>
+
+<!-- Slideshow -->
+<div class="slideshow-container" id="social-slideshow">
+    <div class="slides-wrapper">
+      <div class="slide-item"><img src="tasks/social1.jpg" alt="Social Moment 1"></div>
+      <div class="slide-item"><img src="tasks/social2.jpg" alt="Social Moment 2"></div>
+      <div class="slide-item"><img src="tasks/social3.jpg" alt="Social Moment 3"></div>
+      <div class="slide-item"><img src="tasks/social4.jpg" alt="Social Moment 4"></div>
+      <div class="slide-item"><img src="tasks/social5.jpg" alt="Social Moment 5"></div>
+      <div class="slide-item"><img src="tasks/social6.jpg" alt="Social Moment 6"></div>
+    </div>
+
+  <button class="prev" onclick="changeSlide(-1, 'social')">&#10094;</button>
+  <button class="next" onclick="changeSlide(1, 'social')">&#10095;</button>
+
+  <div class="dots" id="social-dots"></div>
+</div>
+
+<p style="text-align: center; margin-top: 30px; color: #aaa; font-size: 14px;">
+  💡 Click on images to view in fullscreen
+</p>
+</section>
+
 <!-- Image Modal -->
 <div id="imageModal" class="modal">
   <span class="close" onclick="closeModal()">&times;</span>
   <img class="modal-content" id="modalImage">
 </div>
 
-<!-- Footer -->
-<footer style="text-align: center; padding: 25px 0; background: rgba(15,15,15,0.6); border-top: 1px solid rgba(255,255,255,0.1); color: #fff; font-size: 14px;">
-  &copy; <span id="current-year"></span> Shanna Hazel A. Palomo. All Rights Reserved.
-</footer>
-
 <script>
-  // Set current year dynamically
-  document.getElementById('current-year').textContent = new Date().getFullYear();
-
-   const faders = document.querySelectorAll('.fade-on-scroll');
+  const faders = document.querySelectorAll('.fade-on-scroll');
 
   const appearOptions = {
     threshold: 0.2, // 20% of the element is visible
@@ -250,43 +252,60 @@ and gained confidence working in a professional tech environment.
     appearOnScroll.observe(fader);
   });
 
-// Modal Functions
-function openModal(src) {
-  document.getElementById('imageModal').classList.add('active');
-  document.getElementById('modalImage').src = src;
-}
+// Store slide indices for each slideshow
+const slideIndices = {
+  work: 0,
+  social: 0
+};
 
-function closeModal() {
-  document.getElementById('imageModal').classList.remove('active');
-}
+function initSlideshow(type) {
+  const container = document.getElementById(type + '-slideshow');
+  if (!container) return;
+  
+  const slides = container.querySelectorAll('.slide-item');
+  const dotsContainer = document.getElementById(type + '-dots');
+  if (!dotsContainer) return;
 
-function openModal(src) {
-document.getElementById("imageModal").style.display = "block";
-document.getElementById("modalImage").src = src;
-}
-function closeModal() {
-document.getElementById("imageModal").style.display = "none";
-}
-let workIndex = 0;
-const workSlides = document.querySelectorAll('#work-slideshow .slide-item');
-const workDotsContainer = document.getElementById('work-dots');
-
-// Create dots
-workSlides.forEach((_, i) => {
-  const dot = document.createElement('span');
-  dot.classList.add('dot');
-  if(i === 0) dot.classList.add('active');
-  dot.addEventListener('click', () => goToSlide(i));
-  workDotsContainer.appendChild(dot);
-});
-
-const workDots = document.querySelectorAll('#work-dots .dot');
-
-function showSlide(index) {
-  workSlides.forEach((slide, i) => {
-    slide.style.transform = `translateX(-${index * 100}%)`;
-    workDots[i].classList.toggle('active', i === index);
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(i, type));
+    dotsContainer.appendChild(dot);
   });
+
+  showSlide(type, 0);
+}
+
+function showSlide(type, index) {
+  const container = document.getElementById(type + '-slideshow');
+  if (!container) return;
+  
+  const slides = container.querySelectorAll('.slide-item');
+  const dots = document.getElementById(type + '-dots');
+  if (!dots) return;
+  
+  const dotElements = dots.querySelectorAll('.dot');
+
+  slides.forEach((slide, i) => {
+    slide.style.display = i === index ? 'flex' : 'none';
+    if(dotElements[i]) dotElements[i].classList.toggle('active', i === index);
+  });
+
+  slideIndices[type] = index;
+}
+
+function changeSlide(n, type = 'work') {
+  const container = document.getElementById(type + '-slideshow');
+  if (!container) return;
+  
+  const slides = container.querySelectorAll('.slide-item');
+  let newIndex = (slideIndices[type] + n + slides.length) % slides.length;
+  showSlide(type, newIndex);
+}
+
+function goToSlide(index, type = 'work') {
+  showSlide(type, index);
 }
 
 // Modal Functions
@@ -308,11 +327,14 @@ document.querySelectorAll('.slide-item img').forEach(img => {
 });
 
 // Close modal when clicking outside image
-document.getElementById('imageModal').addEventListener('click', function(e) {
-  if (e.target === this) {
-    closeModal();
-  }
-});
+const imageModal = document.getElementById('imageModal');
+if (imageModal) {
+  imageModal.addEventListener('click', function(e) {
+    if (e.target === this) {
+      closeModal();
+    }
+  });
+}
 
 // Close modal with Escape key
 document.addEventListener('keydown', function(e) {
@@ -321,22 +343,15 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-function changeSlide(n) {
-  workIndex = (workIndex + n + workSlides.length) % workSlides.length;
-  showSlide(workIndex);
-}
+// Initialize all slideshows
+['work', 'social'].forEach(type => initSlideshow(type));
 
-function goToSlide(index) {
-  workIndex = index;
-  showSlide(workIndex);
-}
-
-// Autoplay
+// Autoplay (every 5s)
 setInterval(() => {
-  changeSlide(1);
+  ['work', 'social'].forEach(type => {
+    changeSlide(1, type);
+  });
 }, 5000);
-
-showSlide(workIndex);
 
   // Dark mode toggle
   const themeBtn = document.getElementById('theme-toggle-btn');
@@ -346,5 +361,6 @@ showSlide(workIndex);
 
 </script>
 
+<script src="sidebar.js"></script>
 </body>
 </html>

@@ -4,67 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Experiential Learning | Shanna Hazel Palomo</title>
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 <link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 <style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #eaeaea;
-    background: linear-gradient(135deg, #1e3a8a, #561bbc);
-    transition: 0.3s;
-  }
-
-  body.dark {
-    background: linear-gradient(135deg, #2a0d4b, #5e20b2);
-    color: #eaeaea;
-  }
-
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    backdrop-filter: blur(12px);
-    background: rgba(15,15,15,0.6);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 24px;
-  }
-
-  nav h1 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #ffd700;
-  }
-
-  nav .nav-item {
-    margin-left: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s;
-  }
-
-  nav .nav-item:hover {
-    color: #ffd700;
-  }
-
-  #theme-toggle-btn {
-    padding: 6px 12px;
-    border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.3);
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-
-  #theme-toggle-btn:hover {
-    background: #ffd700;
-    color: #000;
-  }
-
   .section {
     max-width: 900px;
     margin: 60px auto;
@@ -112,18 +55,44 @@
 </style>
 </head>
 <body>
-
-<!-- Navigation -->
-<nav>
-  <div class="nav-links">
-    <a  href="index.html">Home</a>
-    <a class="nav-item" href="internship.html">Internship</a>
-    <a class="nav-item" href="academic.html">Academic</a>
-    <a class="nav-item" href="reflections.html">Reflections</a>
-    <a class="nav-item" href="experiential.html">Experiential</a>
+  <!-- Navigation Toggle -->
+  <div class="nav-toggle" id="nav-toggle">
+    <i class="uil uil-bars"></i>
   </div>
-  <button id="theme-toggle-btn">🌙</button>
-</nav>
+
+  <!-- Sidebar Backdrop -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav">
+      <div class="nav-menu">
+        <div class="menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="internship.html" class="nav-link">Internship</a>
+            </li>
+            <li class="nav-item">
+              <a href="academic.html" class="nav-link">Academic</a>
+            </li>
+            <li class="nav-item">
+              <a href="reflections.html" class="nav-link">Reflections</a>
+            </li>
+            <li class="nav-item">
+              <a href="experiential.html" class="nav-link">Experiential</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav-close" id="nav-close">
+        <i class="uil uil-times"></i>
+      </div>
+    </nav>
+  </aside>
 
 <section class="section fade-on-scroll">
   <h1>Experiential Learning</h1>
@@ -131,47 +100,39 @@
   <p>Through student organizations, workshops, and volunteer activities, I strengthened teamwork, leadership, communication, and organizational skills.</p>
 
   <h2>Student Organization Involvement</h2>
-  <ul>
-    <li>
-      <strong>GUILD - Gamers Union for Innovation and Leadership Development</strong>
-      Served in Academic Sector and Logistics, supporting events and coordinating academic initiatives.
-    </li>
-    <li>
-      <strong>The Bastion</strong>
-      Member, participating in programs, events, and campus resources.
-    </li>
-    <li>
-      <strong>Benilde Student Government</strong>
-      Associate Member, assisting with programs, events, and campus resources.
-    </li>
-  </ul>
+  <div style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+    <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #ffd700;">
+      <h3 style="color: #ffd700; margin-top: 0;">GUILD - Gamers Union for Innovation and Leadership Development</h3>
+      <p style="margin: 10px 0; color: #d4d4d8;">Served in Academic Sector and Logistics, supporting events and coordinating academic initiatives.</p>
+    </div>
+    <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #ffd700;">
+      <h3 style="color: #ffd700; margin-top: 0;">The Bastion</h3>
+      <p style="margin: 10px 0; color: #d4d4d8;">Member, participating in programs, events, and campus resources.</p>
+    </div>
+    <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #ffd700;">
+      <h3 style="color: #ffd700; margin-top: 0;">Benilde Student Government</h3>
+      <p style="margin: 10px 0; color: #d4d4d8;">Associate Member, assisting with programs, events, and campus resources.</p>
+    </div>
+  </div>
 
   <h2>Workshops, Seminars, and Activities</h2>
-  <ul>
-    <li>Hands-on workshops focused on programming, systems, and IT concepts</li>
-    <li>Group-based case study discussions and project planning sessions</li>
-    <li>Active participation in student-led events and collaborative initiatives</li>
-  </ul>
+  <div style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 10px; border: 1px solid rgba(124, 58, 237, 0.3); max-width: 800px;">
+    <ul style="list-style: disc inside; line-height: 2.2; margin: 0;">
+      <li style="color: #d4d4d8;">Hands-on workshops focused on programming, systems, and IT concepts</li>
+      <li style="color: #d4d4d8;">Group-based case study discussions and project planning sessions</li>
+      <li style="color: #d4d4d8;">Active participation in student-led events and collaborative initiatives</li>
+    </ul>
+  </div>
 
   <h2>Extracurricular & Athletic Involvement</h2>
-  <ul>
-    <li>
-      <strong>Badminton Varsity Team</strong>
-      Represented the school in intercollegiate competitions, enhancing teamwork, focus, and competitive skills.
-    </li>
-  </ul>
+  <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #7c3aed; max-width: 600px;">
+    <h3 style="color: #ffd700; margin-top: 0; margin-bottom: 10px;">Badminton Varsity Team</h3>
+    <p style="margin: 10px 0; color: #d4d4d8;">Represented the school in intercollegiate competitions, enhancing teamwork, focus, and competitive skills.</p>
+  </div>
 </section>
 
-<!-- Footer -->
-<footer style="text-align: center; padding: 25px 0; background: rgba(15,15,15,0.6); border-top: 1px solid rgba(255,255,255,0.1); color: #fff; font-size: 14px;">
-  &copy; <span id="current-year"></span> Shanna Hazel A. Palomo. All Rights Reserved.
-</footer>
-
 <script>
-  // Set current year dynamically
-  document.getElementById('current-year').textContent = new Date().getFullYear();
-
-   const faders = document.querySelectorAll('.fade-on-scroll');
+  const faders = document.querySelectorAll('.fade-on-scroll');
 
   const appearOptions = {
     threshold: 0.2, // 20% of the element is visible
@@ -200,5 +161,6 @@
   });
 </script>
 
+<script src="sidebar.js"></script>
 </body>
 </html>
