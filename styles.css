@@ -704,80 +704,6 @@ button, input {
 }
 .contact-icon.email:hover { background: #ea4335; }
 
-/* ---------- Contact Form ---------- */
-.contact-form {
-  max-width: 520px;
-  margin: 25px auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  background: rgba(255, 255, 255, 0.08);
-  padding: 25px;
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-}
-
-/* Inputs & textarea */
-.contact-form input,
-.contact-form textarea {
-  width: 95%;
-  padding: 12px 10px;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.25);
-  background: rgba(0,0,0,0.25);
-  color: #fff;
-  font-size: 15px;
-  transition: all 0.3s ease;
-}
-
-/* Placeholder */
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: rgba(255,255,255,0.7);
-}
-
-/* Focus effect */
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #ffd700;
-  box-shadow: 0 0 0 2px rgba(255,215,0,0.25);
-  background: rgba(0,0,0,0.35);
-}
-
-/* Textarea */
-.contact-form textarea {
-  resize: none;
-  min-height: 130px;
-}
-
-/* Submit button */
-.contact-form .btn {
-  margin-top: 8px;
-  padding: 12px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #7c3aed, #5e20b2);
-  border: none;
-  cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-/* Button hover */
-.contact-form .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-}
-
-/* Subheading spacing */
-.subheading {
-  margin-top: 40px;
-  text-align: center;
-  color: #ffd700;
-  letter-spacing: 1px;
-}
 
 .fade-on-scroll {
   opacity: 0;
@@ -841,7 +767,7 @@ button, input {
 .moving-gradient {
   background: linear-gradient(270deg, #4169e1, #7c3aed, #5e20b2, #00ffff);
   background-size: 800% 800%;
-  animation: gradientMoveBackground 20s ease infinite;
+  animation: gradientMoveBackground 30s ease infinite;
   position: absolute;
   top: 0;
   left: 0;
@@ -850,7 +776,7 @@ button, input {
   z-index: 0;
   border-radius: inherit;
   filter: blur(60px);
-  opacity: 0.8;
+  opacity: 1;
   pointer-events: none;
 }
 
@@ -873,12 +799,12 @@ button, input {
 .animated-text {
   font-weight: bold;
   font-size: 36px;
-  background: linear-gradient(90deg, #ffd700, #7c3aed, #00ffff, #ffd700);
+  background: linear-gradient(90deg, #ffd700, #00ffff, #ffd700);
   background-size: 300% 300%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientMoveText 5s linear infinite;
+  animation: gradientMoveText 20s linear infinite;
 }
 
 @keyframes gradientMoveText {
