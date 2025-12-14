@@ -5,520 +5,307 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shanna Hazel Palomo — Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Overlock:400,400i,700|Oleo+Script" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <span class="logo">Sans</span>
-
-    <div class="nav-links">
-      <a href="#resume">Resume</a>
-      <a href="#internship">Internship</a>
-      <a href="#academic">Academic</a>
-      <a href="#reflections">Reflections</a>
-      <a href="#experiential">Experiential</a>
-      <a href="#contact">Contact</a>
+  <!-- Menu Container (overlay) -->
+  <div class="menu-container deactive">
+    <div class="overlay"></div>
+    <div class="menu-items">
+      <ul>
+        <li><a href="#welcome-section" onclick="toggleMenu()">Home</a></li>
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </ul>
+      <div class="social">
+        <a href="https://github.com/Sanski11" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/shanna-hazel-palomo-570b64313/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://www.facebook.com/SANSKI.1159" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      </div>
     </div>
+  </div>
 
-    <!-- Dark Mode Toggle -->
-    <button id="theme-toggle">🌙</button>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-wrapper">
+      <div class="brand">Shanna Palomo</div>
+      <button class="menu-button" onclick="toggleMenu()">
+        <span></span>
+      </button>
+    </div>
   </nav>
 
-<div class="hero relative">
-  <!-- Moving Gradient Background -->
-  <div class="absolute inset-0 moving-gradient"></div>
+  <!-- Welcome Section / Hero -->
+  <section id="welcome-section">
+    <div class="forest"></div>
+    <div class="silhouette"></div>
+    <div class="moon"></div>
+    <div class="container">
+      <h1>
+        <span class="line">I do</span>
+        <span class="line"><span class="color">design</span></span>
+        <span class="line">& I love <span class="color">code</span>.</span>
+      </h1>
+      <div class="buttons">
+        <a href="#projects">My Work</a>
+        <a href="#contact" class="cta">Get in Touch</a>
+      </div>
+    </div>
+  </section>
 
-  <div class="hero-text">
-    <h1 class="animated-text">Hi, I'm Shanna Hazel Palomo</h1>
-    <p>Information Systems Student, QA, & Web Developer</p>
-    <a href="#resume-view" class="btn outline">View Resume</a>
-  </div>
+  <!-- About Section -->
+  <section id="about">
+    <div class="wrapper">
+      <article>
+        <div class="title">
+          <h3>Who am I?</h3>
+          <p class="separator"></p>
+          <p class="subtitle">
+            Information Systems Student, QA, & Web Developer
+          </p>
+        </div>
+        
+        <div class="desc full">
+          <h4 class="subtitle">About Me</h4>
+          <p>
+            Hi! I'm <strong>Shanna Hazel Palomo</strong>, an Information Systems student passionate about 
+            quality assurance, web development, and creating reliable software solutions. I recently completed 
+            an internship as a <strong>QA Intern at WizyEMM</strong>, where I gained hands-on experience in 
+            manual testing, bug tracking, and Agile workflows.
+          </p>
+          <p>
+            I enjoy working on both individual and collaborative projects, from programming in Python, C++, 
+            and C# to designing user interfaces and building full-stack web applications. My capstone project, 
+            <strong>EzStay</strong>, showcases my ability to develop comprehensive web-based systems using 
+            HTML, CSS, JavaScript, and Flask.
+          </p>
+        </div>
 
-  <div class="hero-image">
-    <img src="profile.jpg" alt="Profile Photo">
-  </div>
-</div>
+        <div class="desc">
+          <h4 class="subtitle">Education</h4>
+          <p>
+            <strong>Bachelor of Science in Information Systems</strong><br>
+            Currently pursuing my degree with a focus on software development, 
+            database design, system analysis, and quality assurance.
+          </p>
+        </div>
 
-<section id="resume" class="section fade-on-scroll">
-  <h2 class="animated-text">Electronic Resume</h2>
+        <div class="desc">
+          <h4 class="subtitle">Skills & Expertise</h4>
+          <p>
+            <strong>Technical Skills:</strong> Python, C++, C#, HTML, CSS, JavaScript, Flask, SQL<br>
+            <strong>QA Skills:</strong> Manual Testing, Bug Tracking, Regression Testing, Test Documentation<br>
+            <strong>Tools:</strong> Git, Agile/Scrum, UI/UX Design
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
 
-  <div class="resume-card">
-    <div class="resume-info">
-      <h3>Web-Based Resume</h3>
-      <p>
-        This electronic resume highlights my education, technical skills,
-        internship experience, and academic background. It is designed to be
-        viewable directly on the web or downloaded.
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="projects-container">
+      <div class="heading">
+        <h3 class="title">My Works</h3>
+        <p class="separator"></p>
+        <p class="subtitle">
+          Here's a collection of my academic projects, internship work, 
+          and personal development projects that showcase my skills and experience.
+        </p>
+      </div>
+
+      <!-- Project 1: EzStay -->
+      <div class="project">
+        <div class="project-link">
+          <img src="projects/ezStay.png" alt="EzStay Capstone Project" class="project-image">
+        </div>
+        <div class="project-details">
+          <h3 class="project-tile">EzStay - Capstone Project</h3>
+          <p class="icons">
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js"></i>
+            <i class="fab fa-python"></i>
+          </p>
+          <small>Built using HTML, CSS, JavaScript, and Flask</small>
+          <p>
+            A web-based request management system developed as my capstone project. 
+            Features include user authentication, request tracking, and an admin dashboard.
+          </p>
+          <div class="buttons">
+            <a href="https://github.com/Sanski11/Capstone" target="_blank">
+              View Source <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="academic.html">
+              More Details <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Aphelion -->
+      <div class="project">
+        <div class="project-details">
+          <h3 class="project-tile">Aphelion: Cats & Dragons</h3>
+          <p class="icons">
+            <i class="fas fa-gamepad"></i>
+            <i class="fas fa-users"></i>
+          </p>
+          <small>Academic Game Development Project</small>
+          <p>
+            An academic game project demonstrating creative design, gameplay mechanics, 
+            and collaborative development. Features engaging gameplay and artistic visual design.
+          </p>
+          <div class="buttons">
+            <a href="https://guild-academic-sector.itch.io/aphelion-catsndragons" target="_blank">
+              Play on itch.io <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="academic.html">
+              More Details <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-link">
+          <img src="projects/Aphelion.png" alt="Aphelion Game Project" class="project-image">
+        </div>
+      </div>
+
+      <!-- Project 3: Internship Work -->
+      <div class="project">
+        <div class="project-link">
+          <img src="tasks/work1.jpg" alt="QA Internship at WizyEMM" class="project-image">
+        </div>
+        <div class="project-details">
+          <h3 class="project-tile">QA Internship at WizyEMM</h3>
+          <p class="icons">
+            <i class="fas fa-bug"></i>
+            <i class="fas fa-tasks"></i>
+          </p>
+          <small>Quality Assurance & Testing</small>
+          <p>
+            Gained practical experience in manual testing, bug documentation, and Agile workflows. 
+            Participated in daily standups, sprint planning, and cross-functional team collaboration.
+          </p>
+          <div class="buttons">
+            <a href="internship.html">
+              View Internship Work <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="Resume_Palomo, Shanna Hazel.pdf" target="_blank">
+              View Resume <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="heading-wrapper">
+        <div class="heading">
+          <p class="title">Want to work with me?</p>
+          <p class="separator"></p>
+          <p class="subtitle">
+            Feel free to reach out for collaborations, opportunities, or just to say hello!
+          </p>
+        </div>
+        <div class="social">
+          <a href="https://github.com/Sanski11" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/shanna-hazel-palomo-570b64313/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://www.facebook.com/SANSKI.1159" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/sanski____/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <form id="contact-form" action="https://formsubmit.co/shannahazelpalomo@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Message" rows="5" required></textarea>
+        
+        <!-- Hidden settings -->
+        <input type="hidden" name="_subject" value="New Portfolio Message">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        
+        <input type="submit" value="SEND MESSAGE">
+      </form>
+      
+      <p style="margin-top: 2rem; text-align: center;">
+        Or email me directly at: 
+        <span class="mail">
+          shannahazelpalomo<span class="at">@</span>gmail<span class="dot">.</span>com
+        </span>
       </p>
     </div>
+  </section>
 
-    <!-- Embedded Resume -->
-    <div id="resume-view" class="resume-view">
-      <iframe 
-        src="Resume_Palomo, Shanna Hazel.pdf" 
-        width="100%" 
-        height="600px" 
-        style="border: 1px solid #ccc; border-radius: 10px;">
-      </iframe>
-	  <div class="resume-actions">
-        <a href="Resume_Palomo, Shanna Hazel.pdf" class="btn" download>Download Resume</a>
-        <a href="Resume_Palomo, Shanna Hazel.pdf" target="_blank" class="btn">View Resume</a>
+  <!-- Footer -->
+  <footer>
+    <div class="wrapper">
+      <h3>&copy; <span id="current-year"></span> Shanna Hazel A. Palomo</h3>
+      <div class="footer-links">
+        <a href="#welcome-section">Back to Top</a>
       </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-  <section id="internship" class="section fade-on-scroll">
-  <h2 class="animated-text">Internship Learning</h2>
+  <script>
+    // Set current year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
 
-  <p class="internship-intro">
-    I served as a <strong>QA Intern at WizyEMM</strong>, 
-	acquiring practical expertise in comprehensive manual test execution, 
-	establishing structured QA lifecycle workflows, 
-	and maintaining effective cross-functional communication within an Agile software development team.
-  </p>
-
-  <!-- Tasks & Outputs -->
-  <h3 class="subheading">Tasks & Outputs</h3>
-  <ul class="task-list">
-    <li>Manual regression testing & bug documentation</li>
-    <li>Daily standups & sprint planning participation</li>
-	<li>Assisted in reviewing QA processes to improve efficiency</li>
-    <li>Proactive communication with team leads</li>
-  </ul>
-
-<!-- Project Description -->
-<h3 class="subheading">Project Description</h3>
-<p>
-  I performed manual testing to ensure software reliability, 
-  including UI checks, functional tests, and regression validation. 
-  I documented issues clearly and collaborated with the development team, 
-  gaining hands-on experience in QA workflows, bug tracking, and cross-team communication.
-</p>
-
-<!-- Social Photos Slideshow -->
-<section id="social" class="section">
-  <h2>Social Photos</h2>
-  <div class="slideshow-container" id="social-slideshow">
-    <div class="slides-wrapper">
-      <div class="slide-item"><img src="tasks/social1.jpg" alt="Social 1"></div>
-      <div class="slide-item"><img src="tasks/social2.jpg" alt="Social 2"></div>
-      <div class="slide-item"><img src="tasks/social3.jpg" alt="Social 3"></div>
-      <div class="slide-item"><img src="tasks/social4.jpg" alt="Social 4"></div>
-      <div class="slide-item"><img src="tasks/social5.jpg" alt="Social 5"></div>
-      <div class="slide-item"><img src="tasks/social6.jpg" alt="Social 6"></div>
-    </div>
-
-    <button class="prev" onclick="changeSlide(-1, 'social')">&#10094;</button>
-    <button class="next" onclick="changeSlide(1, 'social')">&#10095;</button>
-    <div class="dots" id="social-dots"></div>
-  </div>
-</section>
-
-<!-- Work Photos Slideshow -->
-<section id="work" class="section">
-  <h2>Work Photos</h2>
-  <div class="slideshow-container" id="work-slideshow">
-    <div class="slides-wrapper">
-      <div class="slide-item"><img src="tasks/work1.jpg" alt="Work 1"></div>
-      <div class="slide-item">
-        <a href="tasks/work3.pdf" target="_blank">
-          <img src="tasks/work3-thumbnail.jpg" alt="Work 3 PDF">
-        </a>
-      </div>
-      <div class="slide-item">
-        <a href="tasks/work4.pdf" target="_blank">
-          <img src="tasks/work4-thumbnail.jpg" alt="Work 4 PDF">
-        </a>
-      </div>
-    </div>
-
-    <button class="prev" onclick="changeSlide(-1, 'work')">&#10094;</button>
-    <button class="next" onclick="changeSlide(1, 'work')">&#10095;</button>
-    <div class="dots" id="work-dots"></div>
-  </div>
-</section>
-
-  <!-- CTA -->
-  <a href="internship.html" class="btn internship-btn">
-    View Full Internship Page →
-  </a>
-</section>
-
-
-<section id="academic" class="section fade-on-scroll">
-  <h2 class="animated-text">Exemplary Academic Work</h2>
-  <p class="academic-intro">
-    A collection of my best individual and group academic outputs developed throughout my IS program.
-  </p>
-
-  <!-- Academic Categories -->
-  <div class="academic-categories">
-    <h3>Individual Work</h3>
-    <ul>
-      <li>Programming activities in Python, C++, and C#</li>
-      <li>Web layout and UI/UX mockups</li>
-	  <li>Database design and SQL queries</li>
-    </ul>
-
-    <h3>Group Work</h3>
-    <ul>
-      <li>System analysis & design case studies</li>
-      <li>Research presentations and documentation</li>
-      <li>Collaborative feasibility studies</li>
-      <li>EzStay Capstone Project — A web-based request management system developed using HTML, CSS, JavaScript, and Flask.</li>
-	  <li>Aphelion: Cats & Dragons — An academic game project demonstrating creative design, gameplay mechanics, and collaborative development.</li>
-    </ul>
-  </div>
-
-  <div class="slideshow-container" id="academic-slideshow">
-    <div class="slides-wrapper">
-      <div class="slide-item">
-        <div class="project-card">
-          <img src="projects/ezStay.png" alt="EzStay - Capstone Project">
-          <h3>EzStay - Capstone Project</h3>
-          <p>A web-based request management system developed using HTML, CSS, JavaScript, and Flask.</p>
-          <div class="project-links">
-            <a href="https://github.com/Sanski11/Capstone" target="_blank">Source Code</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="slide-item">
-        <div class="project-card">
-          <img src="projects/Aphelion.png" alt="Aphelion: Cats & Dragons">
-          <h3>Aphelion: Cats & Dragons</h3>
-          <p>An academic game project demonstrating creative design, gameplay mechanics, and collaborative development.</p>
-          <div class="project-links">
-            <a href="https://guild-academic-sector.itch.io/aphelion-catsndragons" target="_blank">View on itch.io</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <button class="prev" onclick="changeSlide(-1, 'academic')">&#10094;</button>
-    <button class="next" onclick="changeSlide(1, 'academic')">&#10095;</button>
-    <div class="dots" id="academic-dots"></div>
-  </div>
-  <div class="center-button">
-  <a href="academic.html" class="btn academic-btn">
-    View Full Academic Page →
-  </a>
-</div>
-</section>
-
-<section id="reflections" class="section fade-on-scroll">
-  <h2 class="animated-text">Reflections on College Life</h2>
-
-  <h3>Lessons Learned</h3>
-  <p>
-    During my college journey, I developed responsibility, adaptability, and strong communication skills. Managing coursework, group projects, and internships taught me to prioritize tasks effectively, work collaboratively, and maintain productivity in team-oriented and professional settings.
-  </p>
-
-  <h3>Career Goals</h3>
-  <p>
-    I aspire to pursue a career in <strong>Quality Assurance or web development</strong>. My aim is to contribute to the creation of reliable, user-friendly, and high-quality software solutions.
-  </p>
-
-  <h3>Personal Growth</h3>
-  <p>
-    College experiences helped me grow into a more confident, proactive, and independent professional. I learned to take initiative, accept constructive feedback, and consistently improve both my technical abilities and interpersonal skills.
-  </p>
-
-  <h3>Professional Commitments</h3>
-  <ul>
-    <li>Continual development of technical and professional skills</li>
-    <li>Upholding integrity and professionalism in every work environment</li>
-    <li>Maintaining clear, proactive, and respectful communication</li>
-  </ul>
-
-  <h3>Next Steps</h3>
-  <ul>
-    <li>Pursue certifications to strengthen QA and technical expertise</li>
-    <li>Apply for entry-level and early-career roles in QA, testing, and development</li>
-    <li>Continue building and refining personal and academic portfolio projects</li>
-  </ul>
-  <a href="reflections.html" class="btn reflection-btn">
-    View Full Reflections Page →
-  </a>
-</section>
-
-<section id="experiential" class="section fade-on-scroll">
-  <h2 class="animated-text">Experiential Learning</h2>
-  <p>
-    My involvement in student organizations, workshops, and other extracurricular activities helped me strengthen communication, teamwork, and problem-solving skills.
-  </p>
-
-  <h3>Association of GUILD - Gamers Union for Innovation and Leadership Development — Academic Sector and Logistics</h3>
-  <ul>
-    <li>Participated in seminars and workshops to enhance professional knowledge</li>
-    <li>Engaged in practical exercises and collaborative projects</li>
-    <li>Developed leadership and teamwork skills through active involvement</li>
-  </ul>
-  <a href="experiential.html" class="btn experiential-btn">
-    View Full experientials Page →
-  </a>
-</section>
-
-
-  <section id="contact" class="section contact-section fade-on-scroll">
-  <h2 class="animated-text">Contact Me</h2>
-  <p>Feel free to reach out or connect with me using any of the platforms below.</p>
-
-  <!-- Social Links -->
-<div class="contact-links">
-  <a href="https://www.facebook.com/SANSKI.1159" target="_blank" class="contact-icon facebook" aria-label="Facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-
-  <a href="https://github.com/Sanski11" target="_blank" class="contact-icon github" aria-label="GitHub">
-    <i class="fab fa-github"></i>
-  </a>
-
-  <a href="https://www.linkedin.com/in/shanna-hazel-palomo-570b64313/" target="_blank" class="contact-icon linkedin" aria-label="LinkedIn">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-
-  <a href="https://www.instagram.com/sanski____/" target="_blank" class="contact-icon instagram" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-
-  <a href="mailto:shannahazelpalomo@gmail.com" class="contact-icon email" aria-label="Email">
-    <i class="fas fa-envelope"></i>
-  </a>
-</div>
-
-  <h3 class="subheading">Send me a message here!</h3>
-
- <form 
-    id="contact-form"
-    class="contact-form"
-    action="https://formsubmit.co/shannahazelpalomo@gmail.com"
-    method="POST"
-  >
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-
-    <!-- Hidden settings -->
-    <input type="hidden" name="_subject" value="New Portfolio Message">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_autoresponse"
-           value="Thank you for reaching out! I’ve received your message and will get back to you soon.">
-
-    <button type="submit" class="btn">Send Message</button>
-  </form>
-
-  <p id="form-response" style="margin-top:15px; color: #ffd700; font-weight: bold;"></p>
-</section>
-
-<!-- Footer -->
-<footer style="text-align: center; padding: 25px 0; background: rgba(15,15,15,0.6); border-top: 1px solid rgba(255,255,255,0.1); color: #fff; font-size: 14px;">
-  &copy; <span id="current-year"></span> Shanna Hazel A. Palomo. All Rights Reserved.
-</footer>
-
-<!-- Image Modal -->
-<div id="imageModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <img class="modal-content" id="modalImage">
-</div>
-
-<script>
-   const faders = document.querySelectorAll('.fade-on-scroll');
-
-  const appearOptions = {
-    threshold: 0.2, // 20% of the element is visible
-    rootMargin: "0px 0px -50px 0px" // optional offset
-  };
-
-  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-      if(entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        // observer.unobserve(entry.target); // optional: stop observing after fade-in
-      } else {
-        entry.target.classList.remove('visible'); // fades out when scrolling back up
-      }
-    });
-  }, appearOptions);
-
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
-
-    // Set current year dynamically
-  document.getElementById('current-year').textContent = new Date().getFullYear();
-  
-  /* Smooth scroll */
-  function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-  }
-
-  /* Dark Mode */
-  const toggle = document.getElementById("theme-toggle");
-  toggle.onclick = () => {
-    document.body.classList.toggle("dark");
-    toggle.textContent =
-      document.body.classList.contains("dark") ? "☀️" : "🌙";
-  };
-
-  /* Active nav link */
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".nav-links a");
-
-  function updateActiveLink() {
-    let current = "";
-    let closestSection = null;
-    let closestDistance = Infinity;
+    // Menu Toggle
+    const menuContainer = document.querySelector('.menu-container');
+    const menuButton = document.querySelector('.menu-button');
+    const navbar = document.getElementById('navbar');
     
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const distance = Math.abs(scrollY - sectionTop);
-      
-      if (scrollY >= sectionTop - 200 && distance < closestDistance) {
-        closestDistance = distance;
-        closestSection = section.getAttribute("id");
-        current = closestSection;
+    function toggleMenu() {
+      menuContainer.classList.toggle('active');
+      menuContainer.classList.toggle('deactive');
+      menuButton.classList.toggle('active');
+    }
+
+    // Navbar background on scroll
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 100) {
+        navbar.classList.add('bg-active');
+      } else {
+        navbar.classList.remove('bg-active');
       }
     });
 
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("active");
-      }
-    });
-  }
-
-  // Update on page load
-  updateActiveLink();
-
-  // Update on scroll
-  window.addEventListener("scroll", updateActiveLink);
-
-// Store slide indices for each slideshow
-const slideIndices = {
-  academic: 0,
-  social: 0,
-  work: 0
-};
-
-function initSlideshow(type) {
-  const container = document.getElementById(type + '-slideshow');
-  const slides = container.querySelectorAll('.slide-item');
-  const dotsContainer = document.getElementById(type + '-dots');
-
-  slides.forEach((_, i) => {
-    const dot = document.createElement('span');
-    dot.classList.add('dot');
-    if (i === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => goToSlide(i, type));
-    dotsContainer.appendChild(dot);
-  });
-
-  showSlide(type, 0);
-}
-
-function showSlide(type, index) {
-  const container = document.getElementById(type + '-slideshow');
-  const slides = container.querySelectorAll('.slide-item');
-  const dots = document.getElementById(type + '-dots').querySelectorAll('.dot');
-
-  slides.forEach((slide, i) => {
-    slide.style.display = i === index ? 'flex' : 'none';
-    if(dots[i]) dots[i].classList.toggle('active', i === index);
-  });
-
-  slideIndices[type] = index;
-}
-
-function changeSlide(n, type) {
-  const container = document.getElementById(type + '-slideshow');
-  const slides = container.querySelectorAll('.slide-item');
-  let newIndex = (slideIndices[type] + n + slides.length) % slides.length;
-  showSlide(type, newIndex);
-}
-
-function goToSlide(index, type) {
-  showSlide(type, index);
-}
-
-// Modal Functions
-function openModal(src) {
-  document.getElementById('imageModal').classList.add('active');
-  document.getElementById('modalImage').src = src;
-}
-
-function closeModal() {
-  document.getElementById('imageModal').classList.remove('active');
-}
-
-// Add click event listeners to all slide images for fullscreen
-document.querySelectorAll('.slide-item img').forEach(img => {
-  img.style.cursor = 'pointer';
-  img.addEventListener('click', function(e) {
-    openModal(this.src);
-  });
-});
-
-// Close modal when clicking outside image
-document.getElementById('imageModal').addEventListener('click', function(e) {
-  if (e.target === this) {
-    closeModal();
-  }
-});
-
-// Close modal with Escape key
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    closeModal();
-  }
-});
-
-// Initialize all slideshows
-['academic', 'social', 'work'].forEach(type => initSlideshow(type));
-
-// Optional: Autoplay (every 5s)
-setInterval(() => {
-  ['academic', 'social', 'work'].forEach(type => {
-    changeSlide(1, type);
-  });
-}, 10000);
-
-const form = document.getElementById('contact-form');
-  const responseMsg = document.getElementById('form-response');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault(); // Prevent default redirect behavior
-
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
         }
       });
+    });
 
-      if (response.ok) {
-        responseMsg.textContent = "✅ Thank you! Your message has been sent.";
-        form.reset();
-      } else {
-        responseMsg.textContent = "❌ Oops! Something went wrong. Please try again later.";
-      }
-    } catch (error) {
-      responseMsg.textContent = "❌ Error sending message. Check your connection.";
-      console.error(error);
-    }
-  });
-</script>
+    // Form submission handling
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(e) {
+      // Let FormSubmit handle the submission
+      alert('Thank you for your message! I will get back to you soon.');
+    });
+  </script>
 
 </body>
 </html>
