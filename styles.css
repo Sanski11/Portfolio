@@ -143,7 +143,7 @@ button, input {
 }
 
 .section {
-  max-width: 900px;
+    max-width: 900px;
     margin: 60px auto;
     padding: 0 20px;
 }
@@ -476,6 +476,17 @@ button, input {
   font-size: 1.8rem;
   color: var(--skin-color);
   margin-right: var(--mb075);
+}
+
+/* ---------- Sections ---------- */
+
+.section h2 {
+  font-size: var(--h1-font-size);
+  color: var(--skin-color);
+  margin-bottom: var(--mb3);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 /* ---------- Buttons ---------- */
@@ -955,6 +966,7 @@ button, input {
 }
 
 /* ========== SECTION STYLES ========== */
+
 
 .section-title {
   position: relative;
