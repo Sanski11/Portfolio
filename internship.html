@@ -61,6 +61,9 @@
     <i class="uil uil-bars"></i>
   </div>
 
+  <!-- Sidebar Backdrop -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
   <!-- Sidebar Navigation -->
   <aside class="sidebar" id="sidebar">
     <nav class="nav">
@@ -349,12 +352,6 @@ setInterval(() => {
     changeSlide(1, type);
   });
 }, 5000);
-
-  // Dark mode toggle
-  const themeBtn = document.getElementById('theme-toggle-btn');
-  themeBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-  });
 
 </script>
 
