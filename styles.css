@@ -1413,3 +1413,120 @@ footer {
     top: 1rem;
   }
 }
+
+/* ================= INTERNSHIP PAGE ================= */
+
+.internship-section {
+  max-width: 950px;
+  margin: 70px auto;
+  padding: 0 24px;
+}
+
+/* Page Title */
+.internship-section h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--skin-color);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* Section Headings */
+.internship-section h2 {
+  font-size: 1.6rem;
+  color: #c084fc;
+  margin: 3rem 0 1.2rem;
+  border-left: 4px solid var(--skin-color);
+  padding-left: 12px;
+}
+
+/* Text */
+.internship-section p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #e5e7eb;
+  margin-bottom: 1.2rem;
+}
+
+/* Lists */
+.internship-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.internship-section li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  color: #d4d4d8;
+}
+
+.internship-section li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--skin-color);
+  font-size: 1.3rem;
+}
+
+/* Intro Card */
+.internship-intro {
+  background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.25),
+    rgba(255, 215, 0, 0.08)
+  );
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 215, 0, 0.35);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
+
+/* Responsibilities Card */
+.internship-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(124, 58, 237, 0.35);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.internship-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--skin-color);
+}
+
+/* Two-column responsibilities */
+.internship-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Skills box */
+.skills-box {
+  background: rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 16px;
+  border-left: 5px solid var(--skin-color);
+}
+
+/* Reflection emphasis */
+.internship-reflection {
+  background: rgba(0,0,0,0.35);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  font-style: italic;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .internship-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .internship-section h1 {
+    font-size: 2.2rem;
+  }
+}
