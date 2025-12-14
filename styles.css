@@ -143,7 +143,9 @@ button, input {
 }
 
 .section {
-  padding: 6.5rem 0 2rem;
+  max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
 }
 
 .section-title {
@@ -474,22 +476,6 @@ button, input {
   font-size: 1.8rem;
   color: var(--skin-color);
   margin-right: var(--mb075);
-}
-
-/* ---------- Sections ---------- */
-.section {
-  max-width: 900px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
-
-.section h2 {
-  font-size: var(--h1-font-size);
-  color: var(--skin-color);
-  margin-bottom: var(--mb3);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-align: center;
 }
 
 /* ---------- Buttons ---------- */
@@ -969,11 +955,6 @@ button, input {
 }
 
 /* ========== SECTION STYLES ========== */
-
-.section {
-  padding: 5rem 0;
-  margin-left: 100px;
-}
 
 .section-title {
   position: relative;
