@@ -1031,7 +1031,11 @@ button, input {
   padding: 2rem;
   border-radius: 12px;
   border-left: 4px solid var(--skin-color);
-  margin-bottom: 2rem;
+
+  max-width: 800px;      /* keeps it readable */
+  margin: 0 auto 2rem;   /* centers the box */
+  
+  text-align: center;    /* centers text */
 }
 
 /* Academic Section */
