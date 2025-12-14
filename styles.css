@@ -144,6 +144,8 @@ button, input {
 
 .section {
   padding: 6.5rem 0 2rem;
+   max-width: 900px;
+  margin: 60px auto;
 }
 
 .section-title {
