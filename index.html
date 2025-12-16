@@ -551,39 +551,6 @@ setInterval(() => {
     changeSlide(1, type);
   });
 }, 10000);
-
-function enableSwipe(slideshowId, type) {
-  const container = document.getElementById(slideshowId);
-  if (!container) return;
-
-  let startX = 0;
-  let endX = 0;
-
-  container.addEventListener('touchstart', e => {
-    startX = e.touches[0].clientX;
-  });
-
-  container.addEventListener('touchmove', e => {
-    endX = e.touches[0].clientX;
-  });
-
-  container.addEventListener('touchend', () => {
-    const diff = startX - endX;
-
-    if (Math.abs(diff) > 50) {
-      if (diff > 0) {
-        changeSlide(1, type);
-      } else {
-        changeSlide(-1, type);
-      }
-    }
-  });
-}
-
-/* Enable swipe for slideshows */
-enableSwipe('social-slideshow', 'social');
-enableSwipe('academic-slideshow', 'academic');
-enableSwipe('work-slideshow', 'work');
 </script>
 
 <script src="sidebar.js"></script>
