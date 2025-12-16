@@ -803,6 +803,7 @@ button, input {
   filter: blur(60px);
   opacity: 1;
   pointer-events: none;
+  overflow: visible; /* allow it to overflow */
 }
 
 /* Gradient animation */
