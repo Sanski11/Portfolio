@@ -369,6 +369,8 @@ button, input {
     /* cancel sidebar margin */
   margin-left: -100px;
   height: 100vh;
+  position: relative; /* allows the gradient to be positioned absolute relative to this section */
+  overflow: visible;  /* let gradient overflow if needed */
 }
 
 .home-container {
@@ -785,8 +787,9 @@ button, input {
 
 /* Moving Gradient Background */
 .moving-gradient {
-  position: absolute;
-  inset: 0;
+  position: absolute;  /* absolute positioning */
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(
@@ -798,12 +801,15 @@ button, input {
   );
   background-size: 800% 800%;
   animation: gradientMoveBackground 30s ease infinite;
-  z-index: 0;
-  border-radius: inherit;
+  z-index: 0;          /* behind the content */
   filter: blur(60px);
   opacity: 1;
-  pointer-events: none;
-  overflow: visible; /* allow it to overflow */
+  pointer-events: none; /* prevent blocking clicks */
+}
+
+.home-content {
+  position: relative;   /* so content sits above the gradient */
+  z-index: 1;
 }
 
 /* Gradient animation */
