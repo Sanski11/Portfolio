@@ -1131,7 +1131,10 @@ footer {
     margin-left: 0;
     padding-top: 5.5rem;
     padding-bottom: 3rem;
-  }
+    background: linear-gradient(135deg, #1e3a8a, #561bbc);
+    background-size: cover;
+    background-position: center center;
+    }
 
   .home-container {
     display: flex;
