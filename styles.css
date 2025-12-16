@@ -540,7 +540,7 @@ button, input {
 
 .slides-wrapper {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 10s ease-in-out;
 }
 
 .slide-item {
