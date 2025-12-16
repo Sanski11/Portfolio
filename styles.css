@@ -763,16 +763,44 @@ button, input {
   color: #ffd700;
 }
 
+.home,
+.section,
+.project-card,
+.resume-info,
+.resume-view,
+.activity-card,
+.internship-intro {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ensure content stays above gradient */
+.home-container,
+.section > *,
+.project-card > *,
+.resume-info > *,
+.resume-view > *,
+.activity-card > *,
+.internship-intro > * {
+  position: relative;
+  z-index: 1;
+}
+
 /* Moving Gradient Background */
 .moving-gradient {
-  background: linear-gradient(270deg, #4169e1, #7c3aed, #5e20b2, #00ffff);
-  background-size: 800% 800%;
-  animation: gradientMoveBackground 30s ease infinite;
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
+  background: linear-gradient(
+    270deg,
+    #4169e1,
+    #7c3aed,
+    #5e20b2,
+    #00ffff
+  );
+  background-size: 800% 800%;
+  animation: gradientMoveBackground 30s ease infinite;
   z-index: 0;
   border-radius: inherit;
   filter: blur(60px);
@@ -780,9 +808,10 @@ button, input {
   pointer-events: none;
 }
 
+/* Gradient animation */
 @keyframes gradientMoveBackground {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
@@ -1100,6 +1129,18 @@ footer {
 /* ---------- Mobile & Tablet Responsive ---------- */
 @media screen and (max-width: 768px) {
 
+  .moving-gradient {
+    filter: blur(45px);
+    opacity: 0.75;
+    background-size: 1000% 1000%;
+  }
+
+  .home,
+  .section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   /* Sidebar */
   .sidebar {
     width: 0;
@@ -1131,10 +1172,7 @@ footer {
     margin-left: 0;
     padding-top: 5.5rem;
     padding-bottom: 3rem;
-    background: linear-gradient(135deg, #1e3a8a, #561bbc);
-    background-size: cover;
-    background-position: center center;
-    }
+  }
 
   .home-container {
     display: flex;
@@ -1219,6 +1257,11 @@ footer {
 /* Smaller devices (<480px) */
 @media screen and (max-width: 480px) {
 
+  .moving-gradient {
+    filter: blur(35px);
+    opacity: 0.65;
+  }
+  
   .home-title {
     font-size: 1.35rem;
   }
