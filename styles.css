@@ -562,18 +562,86 @@ button, input {
   border-color: #ffd700;
 }
 
-.project-card {
-	text-align: center;
-     max-width: 500px;
- }
-
-.project-card img {
+/* Image wrapper */
+.project-image-wrapper {
+  position: relative;
   width: 100%;
-  height: 400px; /* bigger image */
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Project image */
+.project-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+/* Overlay layer */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 10, 40, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Overlay text */
+.project-overlay span {
+  color: #ffd700;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border: 2px solid #ffd700;
+  border-radius: 999px;
+  letter-spacing: 0.5px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Desktop hover effect */
+@media (hover: hover) and (pointer: fine) {
+  .project-image-wrapper:hover img {
+    transform: scale(1.06);
+  }
+
+  .project-image-wrapper:hover .project-overlay {
+    opacity: 1;
+  }
+}
+
+.project-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.project-actions .button {
+  flex: 1;
+  text-align: center;
+}
+
+.button.outline {
+  background: transparent;
+  border: 2px solid #ffd700;
+  color: #ffd700;
+}
+
+.button.outline:hover {
+  background: #ffd700;
+  color: #1e1b4b;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card h3 {
@@ -587,12 +655,12 @@ button, input {
   margin-bottom: 12px;
 }
 
-    .project-links a {
-      text-decoration: none;
-      color: #00ffff;
-      font-weight: bold;
-      margin-right: 10px;
-    }
+.project-links a {
+  text-decoration: none;
+  color: #00ffff;
+  font-weight: bold;
+  margin-right: 5px;
+}
 
     /* Desktop arrows */
 .prev,
@@ -658,6 +726,25 @@ button, input {
   .photo-gallery img:hover {
     transform: scale(1.05);
     border-color: #ffd700;
+  }
+}
+
+@media (hover: hover) {
+  .project-image-wrapper::after {
+    content: "Click to Preview";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffd700;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-weight: 600;
+  }
+
+  .project-image-wrapper:hover::after {
+    opacity: 1;
   }
 }
 
@@ -1265,6 +1352,19 @@ footer {
     font-size: 32px;
     top: 12px;
     right: 16px;
+  }
+
+  .project-overlay {
+    opacity: 1;
+    background: linear-gradient(
+      to top,
+      rgba(20, 10, 40, 0.75),
+      rgba(20, 10, 40, 0.15)
+    );
+  }
+
+  .project-overlay span {
+    font-size: 16px;
   }
 }
 

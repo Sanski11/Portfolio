@@ -266,12 +266,36 @@
           <h3 class="section-title" style="font-size: 1.3rem; text-align: center; margin-bottom: 30px;">Featured Projects</h3>
           <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
             <div class="project-card">
-              <img src="projects/ezStay.png" alt="EzStay" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
-              <h4 style="color: #ffd700;">EzStay - Capstone Project</h4>
-              <p>A web-based request management system developed using HTML, CSS, JavaScript, and Flask.</p>
-              <a href="https://github.com/Sanski11/Capstone" target="_blank" class="button">
-                <i class="uil uil-github-alt"></i> View Code
-              </a>
+              <div class="project-image-wrapper" onclick="openModal('projects/ezstay-dashboard.png')">
+                <img src="projects/ezStay.png" alt="EzStay Dashboard System">
+              </div>
+
+              <h4 style="color: #ffd700; margin-top: 15px;">
+                EzStay – Hotel Management System
+              </h4>
+
+              <p>
+                A web-based hotel management and service request system built using
+                Flask, MySQL, HTML, CSS, and JavaScript. Designed to streamline
+                operations for budget hotels through self-service technology.
+              </p>
+
+              <div class="project-actions">
+                <a
+                  href="https://github.com/Sanski11/Capstone"
+                  target="_blank"
+                  class="button"
+                >
+                  <i class="uil uil-github-alt"></i> View Code
+                </a>
+
+                <button
+                  class="button outline"
+                  onclick="openModal('projects/ezstay-dashboard.png')"
+                >
+                  View System
+                </button>
+              </div>
             </div>
 
             <div class="project-card">
